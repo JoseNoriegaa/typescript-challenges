@@ -1,0 +1,27 @@
+{
+  "name": "ts-challenges",
+  "version": "0.0.1",
+  "description": "TypeScript challenges",
+  "main": "index.js",
+  "scripts": {
+    "check-types": "tsc --pretty --noEmit",
+    "check-all": "yarn check-types src/**/*.ts"
+  },
+  "author": {
+    "name": "josenoriega723@gmail.com",
+    "url": "https://github.com/josenoriegaa"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0"
+  },
+  "dependencies": {
+    "@type-challenges/utils": "^0.1.1",
+    "typescript": "4"
+  }
+}
