@@ -25,3 +25,10 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Push](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3057-push.ts)
 - [Unshift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3060-unshift.ts)
 - [Parameters](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3312-parameters.ts)
+
+### Medium
+
+- [Return type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2-return-type.ts)
+- [Omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4-omit.ts)
+- [Readonly 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8-readonly-2.ts)
+- [Deep readonly](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9-deep-readonly.ts)
