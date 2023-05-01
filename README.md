@@ -54,6 +54,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Diff](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/645-diff.ts)
 - [Any of](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/949-any-of.ts)
 - [Is never](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1042-is-never.ts)
+- [Is union](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1097-is-union.ts)
 
  ## Unsolved Problems
 
