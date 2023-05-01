@@ -42,3 +42,20 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Trim](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/108-trim.ts)
 - [Capitalize](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/110-capitalize.ts)
 - [Replace](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/116-replace.ts)
+- [Replace all](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/119-replace-all.ts)
+- [Append argument](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/191-append-argument.ts)
+- [String length](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/298-string-length.ts)
+- [Flatten](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/459-flatten.ts)
+- [Append to object](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/527-append-to-object.ts)
+- [Absolute](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/529-absolute.ts)
+- [String to union](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/531-string-to-union.ts)
+- [Merge](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/599-merge.ts)
+- [Kebab case](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/612-kebab-case.ts)
+- [Diff](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/645-diff.ts)
+- [Any of](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/949-any-of.ts)
+- [Is never](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1042-is-never.ts)
+
+ ## Unsolved Problems
+
+- [EASY - Includes](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/898-includes.todo.ts)
+- [MEDIUM - Permutation](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/296-permutation.todo.ts)
