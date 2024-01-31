@@ -1,45 +1,35 @@
-/*
-  8 - Readonly 2
-  -------
-  by Anthony Fu (@antfu) #medium #readonly #object-keys
-
-  ### Question
-
-  Implement a generic `MyReadonly2<T, K>` which takes two type argument `T` and `K`.
-
-  `K` specify the set of properties of `T` that should set to Readonly. When `K` is not provided, it should make all properties readonly just like the normal `Readonly<T>`.
-
-  For example
-
-  ```ts
-  interface Todo {
-    title: string
-    description: string
-    completed: boolean
-  }
-
-  const todo: MyReadonly2<Todo, 'title' | 'description'> = {
-    title: "Hey",
-    description: "foobar",
-    completed: false,
-  }
-
-  todo.title = "Hello" // Error: cannot reassign a readonly property
-  todo.description = "barFoo" // Error: cannot reassign a readonly property
-  todo.completed = true // OK
-  ```
-
-  > View on GitHub: https://tsch.js.org/8
-*/
+/**
+ * 8 - Readonly 2
+ *
+ * Implement a generic `MyReadonly2<T, K>` which takes two type argument `T` and `K`.
+ *
+ * `K` specify the set of properties of `T` that should set to Readonly. When `K` is not provided,
+ * it should make all properties readonly just like the normal `Readonly<T>`.
+ *
+ * For example
+ *
+ * ```ts
+ * interface Todo {
+ *   title: string
+ *   description: string
+ *   completed: boolean
+ * }
+ *
+ * const todo: MyReadonly2<Todo, 'title' | 'description'> = {
+ *   title: "Hey",
+ *   description: "foobar",
+ *   completed: false,
+ * }
+ *
+ * todo.title = "Hello" // Error: cannot reassign a readonly property
+ * todo.description = "barFoo" // Error: cannot reassign a readonly property
+ * todo.completed = true // OK
+ * ```
+ */
 
 /* _____________ Your Code Here _____________ */
 
-type MyReadonly2<T, K extends keyof T = keyof T> = {
-  readonly [Key in keyof T as Key extends K ? Key : never]: T[Key];
-} & { [Key in keyof T as Key extends K ? never : Key]: T[Key] }
-
-
-type MyReadonly2V2<T, K extends keyof T = keyof T> = {
+type MyReadonly2<T extends object, K extends keyof T = keyof T> = {
   readonly [Key in K]: T[Key];
 } & {
   [Key in keyof T as Key extends K ? never : Key]: T[Key];
@@ -55,17 +45,8 @@ type cases = [
   Expect<Alike<MyReadonly2<Todo2, 'description' >, Expected>>,
 ]
 
-type casesV2 = [
-  Expect<Alike<MyReadonly2V2<Todo1>, Readonly<Todo1>>>,
-  Expect<Alike<MyReadonly2V2<Todo1, 'title' | 'description'>, Expected>>,
-  Expect<Alike<MyReadonly2V2<Todo2, 'title' | 'description'>, Expected>>,
-  Expect<Alike<MyReadonly2V2<Todo2, 'description' >, Expected>>,
-]
-
 // @ts-expect-error
 type error = MyReadonly2<Todo1, 'title' | 'invalid'>
-// @ts-expect-error
-type errorV2 = MyReadonly2V2<Todo1, 'title' | 'invalid'>
 
 interface Todo1 {
   title: string

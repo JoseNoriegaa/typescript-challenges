@@ -1,30 +1,50 @@
-/*
-  108 - Trim
-  -------
-  by Anthony Fu (@antfu) #medium #template-literal
-
-  ### Question
-
-  Implement `Trim<T>` which takes an exact string type and returns a new string with the whitespace from both ends removed.
-
-  For example
-
-  ```ts
-  type trimmed = Trim<'  Hello World  '> // expected to be 'Hello World'
-  ```
-
-  > View on GitHub: https://tsch.js.org/108
-*/
+/**
+ * 108 - Trim
+ *
+ * Implement `Trim<T>` which takes an exact string type and returns a new string with the whitespace from both ends removed.
+ *
+ * For example
+ *
+ * ```ts
+ * type trimmed = Trim<'  Hello World  '> // expected to be 'Hello World'
+ * ```
+ */
 
 /* _____________ Your Code Here _____________ */
 
-type RemovableChars = ' ' | '\n' | '\t';
+type CharsToTrim = ' ' | '\n' | '\t';
 
-type Trim<S extends string> = S extends `${RemovableChars}${infer R}`
-  ? Trim<R>
-  : S extends `${infer L}${RemovableChars}`
-    ? Trim<L>
-    : S;
+type Split<S> = S extends `${infer A}${infer B}`
+  ? [A, ...Split<B>]
+  : [];
+
+type Join<L extends string[]> = L extends [infer A extends string, ...infer R extends string[]]
+  ? `${A}${Join<R>}`
+  : '';
+
+type RemoveSpacesAtTheEnd<L extends string[]> = L extends [...infer R extends string[], infer A]
+  ? A extends CharsToTrim
+    ? RemoveSpacesAtTheEnd<R>
+    : L
+  : []
+
+type RemoveSpacesAtTheBeginning<L extends string[]> = L extends [infer A, ...infer R extends string[]]
+  ? A extends CharsToTrim
+    ? RemoveSpacesAtTheBeginning<R>
+    : L
+  : [];
+
+type Trim<S extends string> =
+  Join<
+    RemoveSpacesAtTheBeginning<
+      RemoveSpacesAtTheEnd<
+        Split<S>
+      >
+    >
+  >
+;
+
+type S = Trim<'    hola                 sss   '>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

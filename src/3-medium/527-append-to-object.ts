@@ -1,31 +1,28 @@
-/*
-  527 - Append to object
-  -------
-  by Andrey Krasovsky (@bre30kra69cs) #medium #object-keys
-
-  ### Question
-
-  Implement a type that adds a new field to the interface. The type takes the three arguments. The output should be an object with the new field.
-
-  For example
-
-  ```ts
-  type Test = { id: '1' }
-  type Result = AppendToObject<Test, 'value', 4> // expected to be { id: '1', value: 4 }
-  ```
-
-  > View on GitHub: https://tsch.js.org/527
-*/
+/**
+ * 527 - Append to object
+ *
+ * Implement a type that adds a new field to the interface. The type takes the three arguments.
+ * The output should be an object with the new field.
+ *
+ * For example
+ *
+ * ```ts
+ * type Test = { id: '1' }
+ * type Result = AppendToObject<Test, 'value', 4> // expected to be { id: '1', value: 4 }
+ * ```
+ */
 
 /* _____________ Your Code Here _____________ */
 
-type AppendToObject<T extends object, U extends PropertyKey, V extends unknown> = {
+type AppendToObject<
+  T extends Record<string, unknown>,
+  U extends string,
+  V
+> = {
   [K in (keyof T | U)]: K extends U
     ? V
-    : K extends keyof T
-      ? T[K]
-      : never;
-}
+    : T[K];
+};
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
@@ -64,11 +61,13 @@ type testExpect3 = {
   key: 'cow'
   value: 'yellow'
   sun: false
-  isMotherRussia: false | undefined
+  moon: false | undefined
 }
+
+type R = AppendToObject<test1, 'home', boolean>;
 
 type cases = [
   Expect<Equal<AppendToObject<test1, 'home', boolean>, testExpect1>>,
   Expect<Equal<AppendToObject<test2, 'home', 1>, testExpect2>>,
-  Expect<Equal<AppendToObject<test3, 'isMotherRussia', false | undefined>, testExpect3>>,
+  Expect<Equal<AppendToObject<test3, 'moon', false | undefined>, testExpect3>>,
 ]

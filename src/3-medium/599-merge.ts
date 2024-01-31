@@ -1,37 +1,31 @@
-/*
-  599 - Merge
-  -------
-  by ZYSzys (@ZYSzys) #medium #object
-
-  ### Question
-
-  Merge two types into a new type. Keys of the second type overrides keys of the first type.
-
-  For example
-
-  ```ts
-  type foo = {
-    name: string;
-    age: string;
-  }
-  type coo = {
-    age: number;
-    sex: string
-  }
-
-  type Result = Merge<foo,coo>; // expected to be {name: string, age: number, sex: string}
-  ```
-
-  > View on GitHub: https://tsch.js.org/599
-*/
+/**
+ * 599 - Merge
+ *
+ * Merge two types into a new type. Keys of the second type overrides keys of the first type.
+ *
+ * For example
+ *
+ * ```ts
+ * type foo = {
+ *   name: string
+ *   age: string
+ * }
+ * type coo = {
+ *   age: number
+ *   sex: string
+ * }
+ *
+ * type Result = Merge<foo, coo> // expected to be {name: string, age: number, sex: string}
+ * ```
+ */
 
 /* _____________ Your Code Here _____________ */
 
-type Merge<F extends object, S extends object> = {
-  [key in (keyof F | keyof S)]: key extends keyof S
-    ? S[key]
-    : key extends keyof F
-      ? F[key]
+type Merge<F, S> = {
+  [K in (keyof F | keyof S)]: K extends keyof S
+    ? S[K]
+    : K extends keyof F
+      ? F[K]
       : never;
 }
 
