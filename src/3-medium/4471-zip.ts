@@ -9,7 +9,10 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Zip<T, U> = any
+type Zip<T extends unknown[], U extends unknown[], Output extends unknown[] = []> = 
+  Output['length'] extends (T['length'] | U['length'])
+    ? Output
+    : Zip<T, U, [...Output, [T[Output['length']], U[Output['length']]]]>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

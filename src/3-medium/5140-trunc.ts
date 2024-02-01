@@ -12,7 +12,15 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Trunc = any
+type Trunc<S extends (string | number)> = `${S}` extends infer Input
+  ? Input extends `.${string}`
+    ? '0'
+    : Input extends `${infer N extends number}.${string}`
+      ? `${N}`
+      : Input
+  : never;
+
+type A = Trunc<12.345>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

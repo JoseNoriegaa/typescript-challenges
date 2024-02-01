@@ -12,7 +12,15 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Without<T, U> = any
+type NumsToUnion<T extends (number | number[])> = T extends number[] ? T[number] : T;
+
+type Without<T extends number[], U extends (number | number[])> = NumsToUnion<U> extends infer Nums
+  ? T extends [infer A, ...infer R extends number[]]
+    ? A extends Nums
+      ? Without<R, U>
+      : [A, ...Without<R, U>]
+    : []
+  : never;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

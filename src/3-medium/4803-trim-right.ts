@@ -12,7 +12,21 @@
 
 /* _____________ Your Code Here _____________ */
 
-type TrimRight<S extends string> = any
+type Split<S extends string> = S extends `${infer A}${infer B}`
+  ? [A, ...Split<B>]
+  : [];
+
+type TrimArray<L extends string[]> = L extends [...infer R extends string[], infer Last extends string]
+  ? Last extends (' ' | '\n' | '\t')
+    ? TrimArray<R>
+    : L
+  : L;
+
+type Join<L extends string[]> = L extends [infer A extends string, ...infer R extends string[]]
+  ? `${A}${Join<R>}`
+  : ``
+
+type TrimRight<S extends string> = Join<TrimArray<Split<S>>>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
