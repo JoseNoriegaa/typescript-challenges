@@ -20,9 +20,15 @@
 
 /* _____________ Your Code Here _____________ */
 
-type PartialByKeys<T, K> = any
+type PartialByKeysV1<T extends object, K extends keyof T = keyof T> =
+  (Omit<T, K> & { [Key in K]?: T[Key] }) extends infer Intersection
+    ? { [Key in keyof Intersection]: Intersection[Key] }
+    : never;
 
-/* _____________ Test Cases _____________ */
+type PartialByKeys<T extends object, K extends keyof T = keyof T> =
+  Omit<(Omit<T, K> & { [Key in K]?: T[Key] }), never>
+
+  /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
 interface User {

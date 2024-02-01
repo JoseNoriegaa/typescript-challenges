@@ -13,7 +13,11 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Join<T, U> = any
+type Join<T extends string[], U extends string> = T extends [infer A extends string, ...infer Rest extends [string, ...string[]]]
+  ? `${A}${U}${Join<Rest, U>}`
+  : T['length'] extends 0
+    ? ''
+    : T[0];
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

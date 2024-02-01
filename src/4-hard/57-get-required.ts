@@ -12,7 +12,13 @@
 
 /* _____________ Your Code Here _____________ */
 
-type GetRequired<T> = any
+type GetRequired<
+  T extends Record<string, unknown>,
+  K extends keyof T = keyof T,
+  F extends Required<T> = Required<T>
+> = {
+  [Key in K as T[Key] extends F[Key] ? Key : never]: T[Key];
+}
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

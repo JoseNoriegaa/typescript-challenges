@@ -17,11 +17,21 @@
 
 /* _____________ Your Code Here _____________ */
 
-type ObjectEntries<T, K extends keyof T = keyof T> = K extends unknown
-  ? [K, T[K]]
-  : never;
+type ObjectEntries<T, U = Required<T>> =
+  {
+    [K in keyof U]: [
+      K,
+      [U[K]] extends [never]
+        ? K extends keyof T
+          ? [T[K]] extends [never]
+            ? never
+            : undefined
+          : never
+        : U[K]
+    ]
+  }[keyof U];
 
-/* _____________ Test Cases _____________ */
+  /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
 interface Model {

@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (54/119)
+## Problems (63/110)
 
 ### Warm (1/1) ✅
 
@@ -27,7 +27,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Unshift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3060-unshift.ts)
 - [Parameters](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3312-parameters.ts)
 
-### Medium (40/97)
+### Medium (48/97)
 
 - [Return type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2-return-type.ts)
 - [Omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3-omit.ts)
@@ -60,27 +60,32 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Remove index signature](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1367-remove-index-signature.ts)
 - [Percentage parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1978-percentage-parser.ts)
 - [Drop char](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2070-drop-char.ts)
+- [Minusone](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2257-minusone.ts)
 - [Pickbytype](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2595-pickbytype.ts)
 - [Startswith](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2688-startswith.ts)
 - [Endswith](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2693-endswith.ts)
+- [Partialbykeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2757-partialbykeys.ts)
+- [Requiredbykeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2759-requiredbykeys.ts)
 - [Mutable](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2793-mutable.ts)
 - [Omitbytype](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2852-omitbytype.ts)
+- [Objectentries](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2946-objectentries.ts)
 - [Shift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3062-shift.ts)
+- [Tuple to nested object](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3188-tuple-to-nested-object.ts)
 - [Reverse](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3192-reverse.ts)
 - [Flip arguments](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3196-flip-arguments.ts)
+- [Flattendepth](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3243-flattendepth.ts)
+- [Bem style string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3326-bem-style-string.ts)
 - [Flip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4179-flip.ts)
+- [Join](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5310-join.ts)
+
+### Hard (1/47)
+
+- [Get required](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/57-get-required.ts)
 
  ## Unsolved Problems
 
 
 - [MEDIUM - Permutation](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/296-permutation.todo.ts)
-- [MEDIUM - Minusone](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2257-minusone.todo.ts)
-- [MEDIUM - Partialbykeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2757-partialbykeys.todo.ts)
-- [MEDIUM - Requiredbykeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2759-requiredbykeys.todo.ts)
-- [MEDIUM - Objectentries](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2946-objectentries.todo.ts)
-- [MEDIUM - Tuple to nested object](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3188-tuple-to-nested-object.todo.ts)
-- [MEDIUM - Flattendepth](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3243-flattendepth.todo.ts)
-- [MEDIUM - Bem style string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3326-bem-style-string.todo.ts)
 - [MEDIUM - Inordertraversal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3376-inordertraversal.todo.ts)
 - [MEDIUM - Fibonacci sequence](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4182-fibonacci-sequence.todo.ts)
 - [MEDIUM - Nomiwase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4260-nomiwase.todo.ts)
@@ -93,7 +98,6 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [MEDIUM - Without](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5117-without.todo.ts)
 - [MEDIUM - Trunc](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5140-trunc.todo.ts)
 - [MEDIUM - Indexof](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5153-indexof.todo.ts)
-- [MEDIUM - Join](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5310-join.todo.ts)
 - [MEDIUM - Lastindexof](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5317-lastindexof.todo.ts)
 - [MEDIUM - Unique](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5360-unique.todo.ts)
 - [MEDIUM - Maptypes](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5821-maptypes.todo.ts)
@@ -133,7 +137,6 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [HARD - Simple vue](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/6-simple-vue.todo.ts)
 - [HARD - Currying 1](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/17-currying-1.todo.ts)
 - [HARD - Union to intersection](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/55-union-to-intersection.todo.ts)
-- [HARD - Get required](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/57-get-required.todo.ts)
 - [HARD - Get optional](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/59-get-optional.todo.ts)
 - [HARD - Required keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/89-required-keys.todo.ts)
 - [HARD - Optional keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/90-optional-keys.todo.ts)
