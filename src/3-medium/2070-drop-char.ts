@@ -12,7 +12,11 @@
 
 /* _____________ Your Code Here _____________ */
 
-type DropChar<S, C> = any
+type DropChar<S extends string, C extends string> = S extends `${infer A}${infer Rest}`
+  ? A extends C
+    ? DropChar<Rest, C>
+    : `${A}${DropChar<Rest, C>}`
+  : S;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

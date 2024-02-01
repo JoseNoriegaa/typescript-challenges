@@ -17,7 +17,9 @@
 
 /* _____________ Your Code Here _____________ */
 
-type ObjectEntries<T> = any
+type ObjectEntries<T, K extends keyof T = keyof T> = K extends unknown
+  ? [K, T[K]]
+  : never;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

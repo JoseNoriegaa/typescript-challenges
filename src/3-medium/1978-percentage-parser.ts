@@ -26,7 +26,26 @@
 
 /* _____________ Your Code Here _____________ */
 
-type PercentageParser<A extends string> = any
+type PlusMinusSlot = '-' | '+';
+
+type ExtractNumber<S, O extends string = ''> = S extends `${infer N extends number}${infer R}`
+  ? ExtractNumber<R, `${O}${N}`>
+  : [O, S];
+
+type PercentageParser<A extends string, Output extends string[] = []> =
+  Output['length'] extends 3
+    ? Output
+    : Output['length'] extends 0
+      ? A extends `${infer N extends PlusMinusSlot}${infer Rest}`
+        ? PercentageParser<Rest, [N]>
+        : PercentageParser<A, ['']>
+      : Output['length'] extends 1
+        ? ExtractNumber<A> extends [infer N extends string, infer Rest extends string]
+          ? PercentageParser<Rest, [...Output, N]>
+          : PercentageParser<A, [...Output, '']>
+        : A extends '%'
+          ? [...Output, A]
+          : [...Output, '']
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

@@ -1,7 +1,9 @@
 /**
  * 30970 - IsFixedStringLiteralType
  *
- * Sometimes you may want to determine whether a string literal is a definite type. For example, when you want to check whether the type specified as a class identifier is a fixed string literal type.
+ * Sometimes you may want to determine whether a string literal is a definite type.
+ * For example, when you want to check whether the type specified
+ * as a class identifier is a fixed string literal type.
  *
  * ```typescript
  * type Action<ID extends string> = { readonly id: ID };

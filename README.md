@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (39/134)
+## Problems (54/119)
 
 ### Warm (1/1) ✅
 
@@ -27,7 +27,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Unshift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3060-unshift.ts)
 - [Parameters](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3312-parameters.ts)
 
-### Medium (25/97)
+### Medium (40/97)
 
 - [Return type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2-return-type.ts)
 - [Omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3-omit.ts)
@@ -54,34 +54,34 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Kebabcase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/612-kebabcase.ts)
 - [Diff](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/645-diff.ts)
 - [Anyof](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/949-anyof.ts)
+- [Isnever](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1042-isnever.ts)
+- [Isunion](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1097-isunion.ts)
+- [Replacekeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1130-replacekeys.ts)
+- [Remove index signature](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1367-remove-index-signature.ts)
+- [Percentage parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1978-percentage-parser.ts)
+- [Drop char](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2070-drop-char.ts)
+- [Pickbytype](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2595-pickbytype.ts)
+- [Startswith](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2688-startswith.ts)
+- [Endswith](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2693-endswith.ts)
+- [Mutable](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2793-mutable.ts)
+- [Omitbytype](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2852-omitbytype.ts)
+- [Shift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3062-shift.ts)
+- [Reverse](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3192-reverse.ts)
+- [Flip arguments](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3196-flip-arguments.ts)
+- [Flip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4179-flip.ts)
 
  ## Unsolved Problems
 
 
 - [MEDIUM - Permutation](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/296-permutation.todo.ts)
-- [MEDIUM - Isnever](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1042-isnever.todo.ts)
-- [MEDIUM - Isunion](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1097-isunion.todo.ts)
-- [MEDIUM - Replacekeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1130-replacekeys.todo.ts)
-- [MEDIUM - Remove index signature](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1367-remove-index-signature.todo.ts)
-- [MEDIUM - Percentage parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/1978-percentage-parser.todo.ts)
-- [MEDIUM - Drop char](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2070-drop-char.todo.ts)
 - [MEDIUM - Minusone](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2257-minusone.todo.ts)
-- [MEDIUM - Pickbytype](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2595-pickbytype.todo.ts)
-- [MEDIUM - Startswith](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2688-startswith.todo.ts)
-- [MEDIUM - Endswith](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2693-endswith.todo.ts)
 - [MEDIUM - Partialbykeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2757-partialbykeys.todo.ts)
 - [MEDIUM - Requiredbykeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2759-requiredbykeys.todo.ts)
-- [MEDIUM - Mutable](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2793-mutable.todo.ts)
-- [MEDIUM - Omitbytype](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2852-omitbytype.todo.ts)
 - [MEDIUM - Objectentries](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2946-objectentries.todo.ts)
-- [MEDIUM - Shift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3062-shift.todo.ts)
 - [MEDIUM - Tuple to nested object](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3188-tuple-to-nested-object.todo.ts)
-- [MEDIUM - Reverse](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3192-reverse.todo.ts)
-- [MEDIUM - Flip arguments](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3196-flip-arguments.todo.ts)
 - [MEDIUM - Flattendepth](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3243-flattendepth.todo.ts)
 - [MEDIUM - Bem style string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3326-bem-style-string.todo.ts)
 - [MEDIUM - Inordertraversal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3376-inordertraversal.todo.ts)
-- [MEDIUM - Flip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4179-flip.todo.ts)
 - [MEDIUM - Fibonacci sequence](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4182-fibonacci-sequence.todo.ts)
 - [MEDIUM - Nomiwase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4260-nomiwase.todo.ts)
 - [MEDIUM - Greater than](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4425-greater-than.todo.ts)

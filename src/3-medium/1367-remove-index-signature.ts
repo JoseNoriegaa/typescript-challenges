@@ -17,10 +17,21 @@
 
 /* _____________ Your Code Here _____________ */
 
-type RemoveIndexSignature<T> = any
+type RemoveIndexSignature<T> = {
+  [
+      K in keyof T as [K, string] extends [string, K]
+        ? never
+        : [K, number] extends [number, K]
+          ? never
+          : [K, symbol] extends [symbol, K]
+            ? never
+            : K
+  ]: T[K]
+};
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
+import { IndexSignatureDeclaration } from 'typescript';
 
 type Foo = {
   [key: string]: any

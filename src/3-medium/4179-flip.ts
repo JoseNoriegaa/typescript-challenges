@@ -12,7 +12,9 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Flip<T> = any
+type Flip<T extends Record<string, string | boolean | number>> = {
+  [Key in keyof T as `${T[Key]}`]: Key;
+}
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect, NotEqual } from '@type-challenges/utils'

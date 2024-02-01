@@ -15,9 +15,15 @@
 
 /* _____________ Your Code Here _____________ */
 
-type FlipArguments<T> = any
+type ReverseArray<T extends unknown[]> = T extends [...infer R, infer H]
+  ? [H, ...ReverseArray<R>]
+  : [];
 
-/* _____________ Test Cases _____________ */
+type FlipArguments<T extends Function> = T extends (...args: infer Args) => infer R
+  ? (...args: ReverseArray<Args>) => R
+  : never;
+
+  /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
 type cases = [
