@@ -13,9 +13,17 @@
 
 /* _____________ Your Code Here _____________ */
 
-type LastIndexOf<T, U> = any
+type MyEqual<A, B> =
+  (<T>() => T extends A ? 1 : 0) extends
+  (<T>() => T extends B ? 1 : 0) ? true : false;
 
-/* _____________ Test Cases _____________ */
+type LastIndexOf<T, U> = T extends [...infer R, infer Last]
+  ? MyEqual<Last, U> extends true
+    ? R['length']
+    : LastIndexOf<R, U>
+  : -1
+
+  /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 
 type cases = [
