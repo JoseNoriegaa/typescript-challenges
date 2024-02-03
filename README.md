@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (71/102)
+## Problems (72/101)
 
 ### Warm (1/1) ✅
 
@@ -89,6 +89,10 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 ### Hard (1/47)
 
 - [Get required](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/57-get-required.ts)
+
+### Extreme (1/15)
+
+- [Query string parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/151-query-string-parser.ts)
 
  ## Unsolved Problems
 
@@ -181,7 +185,6 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [HARD - Optionalundefined](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/28143-optionalundefined.todo.ts)
 - [HARD - Bitwisexor](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/30575-bitwisexor.todo.ts)
 - [EXTREME - Readonly keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/5-readonly-keys.todo.ts)
-- [EXTREME - Query string parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/151-query-string-parser.todo.ts)
 - [EXTREME - Slice](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/216-slice.todo.ts)
 - [EXTREME - Integers comparator](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/274-integers-comparator.todo.ts)
 - [EXTREME - Currying 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/462-currying-2.todo.ts)

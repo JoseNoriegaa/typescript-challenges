@@ -15,7 +15,43 @@
 
 /* _____________ Your Code Here _____________ */
 
-type ParseQueryString = any
+type MyEqual<A, B> =
+  (<T>() => T extends A ? 1 : 0) extends
+  (<T>() => T extends B ? 1 : 0)
+  ? true
+  : false;
+
+type SplitBy<S extends string, A extends string> = S extends `${infer F}${A}${infer B}`
+  ? [F, ...SplitBy<B, A>]
+  : [S]
+
+type Includes<L extends unknown[], T> =  L extends [infer A, ...infer R]
+  ? MyEqual<T, A> extends true
+    ? true
+    : Includes<R, T>
+  : false
+
+type AppendToQueryObject<Entry extends [string, unknown], Query extends Record<string, unknown> = {}> = Entry extends [infer Name extends string, infer Value]
+  ? Name extends keyof Query
+    ? Query[Name] extends unknown[]
+      ? Includes<Query[Name], Value> extends true
+        ? Query
+        : Omit<Omit<Query, Name> & { [K in Name]: [...Query[Name], Value] }, never>
+      : MyEqual<Query[Name], Value> extends true
+        ? Query
+        : Omit<Omit<Query, Name> & { [K in Name]: [Query[Name], Value] }, never>
+    : Omit<Query & { [K in Name]: Value }, never>
+  : Query;
+
+type QSToQueryObject<L extends string[], Query extends Record<string, unknown> = {}> = L extends [infer A extends string, ...infer R extends string[]]
+  ? A extends `${infer Name}=${infer Value}`
+    ? QSToQueryObject<R, AppendToQueryObject<[Name, Value], Query>>
+    : A extends ''
+      ? Query
+      : QSToQueryObject<R, AppendToQueryObject<[A, true], Query>>
+  : Query;
+
+type ParseQueryString<Q extends string> = QSToQueryObject<SplitBy<Q, '&'>>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
