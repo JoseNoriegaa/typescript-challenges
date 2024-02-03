@@ -20,6 +20,8 @@
  * type test3 = DeepOmit<obj, 'name'> // { person: { name: string; age: { value: number } } }
  * type test4 = DeepOmit<obj, 'person.age.value'> // { person: { name: string; age: {} } }
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

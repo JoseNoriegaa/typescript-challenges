@@ -12,6 +12,8 @@
  * type Todo = All<Test1, 1> // should be same as true
  * type Todo2 = All<Test2, 1> // should be same as false
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

@@ -9,6 +9,7 @@
  * type CheckRepeatedTuple<[1, 2, 3]>   // false
  * type CheckRepeatedTuple<[1, 2, 1]>   // true
  * ```
+ *
  */
 
 /* _____________ Your Code Here _____________ */

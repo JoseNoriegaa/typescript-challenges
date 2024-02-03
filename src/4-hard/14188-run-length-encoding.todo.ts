@@ -5,7 +5,6 @@
  * Also make a decoder for that string.
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

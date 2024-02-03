@@ -23,6 +23,19 @@
  * //      | [{ value: 'b' },  { x: { y: 3  } }]
  * //      | 17
  * ```
+ *
+ * For context, this type can be very useful if you want to exclude a case on deep data structures:
+ *
+ * ```ts
+ * type ExcludeDeep<A, B> = Exclude<DistributeUnions<A>, B>
+ *
+ * type T0 = ExcludeDeep<[{ value: 'a' | 'b' },  { x: { y: 2 | 3  } }] | 17, [{ value: 'a' },  any]>
+ * //  =>  | [{ value: 'b' },  { x: { y: 2  } }]
+ * //      | [{ value: 'b' },  { x: { y: 3  } }]
+ * //      | 17
+ * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

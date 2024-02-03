@@ -8,6 +8,8 @@
  * type Res1 = BinaryToDecimal<'10'>; // expected to be 2
  * type Res2 = BinaryToDecimal<'0011'>; // expected to be 3
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

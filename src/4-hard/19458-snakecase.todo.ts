@@ -10,6 +10,8 @@
  * type res2 = SnakeCase<"userName">; // => "user_name"
  * type res3 = SnakeCase<"getElementById">; // => "get_element_by_id"
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

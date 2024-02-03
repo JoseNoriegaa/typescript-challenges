@@ -8,6 +8,9 @@
  * ```ts
  * type exp = Fill<[1, 2, 3], 0> // expected to be [0, 0, 0]
  * ```
+ * In order to simulate the real function, the test may contain some boundary conditions, I hope you can enjoy it :)
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

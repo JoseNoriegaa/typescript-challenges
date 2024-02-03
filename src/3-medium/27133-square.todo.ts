@@ -4,7 +4,6 @@
  * Given a number, your type should return its square.
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

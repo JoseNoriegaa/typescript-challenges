@@ -4,7 +4,6 @@
  * return true is a number is odd
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

@@ -9,7 +9,6 @@
  * * minLength and maxLength
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

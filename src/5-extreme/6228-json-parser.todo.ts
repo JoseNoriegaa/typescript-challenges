@@ -7,7 +7,6 @@
  *  - `Numbers` and `Unicode escape (\uxxxx)` in JSON can be ignored. You needn't to parse them.
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

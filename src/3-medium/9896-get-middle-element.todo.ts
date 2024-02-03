@@ -12,6 +12,8 @@
  *   type simple1 = GetMiddleElement<[1, 2, 3, 4, 5]>, // expected to be [3]
  *   type simple2 = GetMiddleElement<[1, 2, 3, 4, 5, 6]> // expected to be [3, 4]
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

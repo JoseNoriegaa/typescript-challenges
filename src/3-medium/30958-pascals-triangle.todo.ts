@@ -5,7 +5,6 @@
  * [Wikipedia](https://en.wikipedia.org/wiki/Pascal%27s_triangle)
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

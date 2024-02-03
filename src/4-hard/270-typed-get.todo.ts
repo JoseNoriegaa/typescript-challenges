@@ -21,6 +21,10 @@
  * type B = Get<Data, 'foo.bar.count'> // 6
  * type C = Get<Data, 'foo.bar'> // { value: 'foobar', count: 6 }
  * ```
+ *
+ * Accessing arrays is not required in this challenge.
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

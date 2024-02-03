@@ -10,7 +10,6 @@
  * Note that when `Lower > Higher`, output an empty tuple.
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

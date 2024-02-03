@@ -14,6 +14,23 @@
  *
  * const result = bindFunc(3) // result: 6
  * ```
+ *
+ * Thus, based on `Currying 1`, we would need to have the dynamic argument version:
+ *
+ * ```ts
+ * const add = (a: number, b: number, c: number) => a + b + c
+ * const three = add(1, 1, 1) 
+ *
+ * const curriedAdd = DynamicParamsCurrying(add)
+ * const six = curriedAdd(1, 2, 3)
+ * const seven = curriedAdd(1, 2)(4)
+ * const nine = curriedAdd(2)(3)(4)
+ * ```
+ *
+ * In this challenge, `DynamicParamsCurrying` may take a function with zero to multiple arguments, you need to correctly type it. The returned function may accept at least one argument. When all the arguments as satisfied, it should yield the return type of the original function correctly.
+ *
+ *
+ * <!--info-footer-start--><br><a href="../../README.md" target="_blank"><img src="https://img.shields.io/badge/-Back-grey" alt="Back"/></a> <a href="https://tsch.js.org/462/answer" target="_blank"><img src="https://img.shields.io/badge/-Share%20your%20Solutions-teal" alt="Share your Solutions"/></a> <a href="https://tsch.js.org/462/solutions" target="_blank"><img src="https://img.shields.io/badge/-Check%20out%20Solutions-de5a77?logo=awesome-lists&logoColor=white" alt="Check out Solutions"/></a> <hr><h3>Related Challenges</h3><a href="https://github.com/type-challenges/type-challenges/blob/main/questions/00017-hard-currying-1/README.md" target="_blank"><img src="https://img.shields.io/badge/-17%E3%83%BBCurrying%201-de3d37" alt="17・Currying 1"/></a> <!--info-footer-end-->
  */
 
 /* _____________ Your Code Here _____________ */

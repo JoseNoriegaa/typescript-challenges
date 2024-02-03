@@ -10,6 +10,8 @@
  * type Test = { id: '1', myProp: { foo: '2' }}
  * type Result = ExtractToObject<Test, 'myProp'> // expected to be { id: '1', foo: '2' }
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

@@ -7,7 +7,6 @@
  * [GeeksForGeeks](https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi)
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

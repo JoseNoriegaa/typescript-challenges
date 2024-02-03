@@ -8,11 +8,13 @@
  * ParseUrlParams<'posts/:id'> // id
  * ParseUrlParams<'posts/:id/:user'> // id | user
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */
 
-type ParseUrlParams<T extends string> = any
+type ParseUrlParams<T> = any
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

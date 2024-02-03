@@ -11,6 +11,8 @@
  * type Res4 = Intersection<[[1, 2, 3], 2 | 3 | 4, 2 | 3]>; // expected to be 2 | 3
  * type Res5 = Intersection<[[1, 2, 3], 2, 3]>; // expected to be never
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

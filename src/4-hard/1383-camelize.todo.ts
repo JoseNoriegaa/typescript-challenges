@@ -17,6 +17,7 @@
  * //   array: [{ snakeCase: string }]
  * // }
  * ```
+ *
  */
 
 /* _____________ Your Code Here _____________ */

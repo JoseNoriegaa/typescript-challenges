@@ -8,6 +8,8 @@
  * ```ts
  * type result = Split<'Hi! How are you?', ' '>  // should be ['Hi!', 'How', 'are', 'you?']
  * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

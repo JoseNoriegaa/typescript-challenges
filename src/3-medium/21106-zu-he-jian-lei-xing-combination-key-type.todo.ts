@@ -5,7 +5,6 @@
  * 2. In the `ModifierKeys` provided, the priority of the previous value is higher than the latter value; that is, `cmd ctrl` is OK, but `ctrl cmd` is not allowed.
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */

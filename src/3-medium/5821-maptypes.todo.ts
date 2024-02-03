@@ -9,6 +9,28 @@
  *   mapTo: number; // will be transformed for number
  * }
  * ```
+ *
+ * ## Examples:
+ *
+ * ```ts
+ * type StringToNumber = { mapFrom: string; mapTo: number;}
+ * MapTypes<{iWillBeANumberOneDay: string}, StringToNumber> // gives { iWillBeANumberOneDay: number; }
+ * ```
+ *
+ * Be aware that user can provide a union of types:
+ * ```ts
+ * type StringToNumber = { mapFrom: string; mapTo: number;}
+ * type StringToDate = { mapFrom: string; mapTo: Date;}
+ * MapTypes<{iWillBeNumberOrDate: string}, StringToDate | StringToNumber> // gives { iWillBeNumberOrDate: number | Date; }
+ * ```
+ *
+ * If the type doesn't exist in our map, leave it as it was:
+ * ```ts
+ * type StringToNumber = { mapFrom: string; mapTo: number;}
+ * MapTypes<{iWillBeANumberOneDay: string, iWillStayTheSame: Function}, StringToNumber> // // gives { iWillBeANumberOneDay: number, iWillStayTheSame: Function }
+ * ```
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

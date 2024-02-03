@@ -26,6 +26,49 @@
  *   }
  * })
  * ```
+ *
+ * And you should use it like this:
+ *
+ * ```typescript
+ * store.getSomething
+ * ```
+ *
+ * instead of:
+ *
+ * ```typescript
+ * store.getSomething()  // error
+ * ```
+ *
+ * Additionally, getters can access state and/or other getters via `this`, but state is read-only.
+ *
+ * ### Actions
+ *
+ * When you define a store like this:
+ *
+ * ```typescript
+ * const store = defineStore({
+ *   // ...other required fields
+ *   actions: {
+ *     doSideEffect() {
+ *       this.xxx = 'xxx'
+ *       return 'ok'
+ *     }
+ *   }
+ * })
+ * ```
+ *
+ * Using it is just to call it:
+ *
+ * ```typescript
+ * const returnValue = store.doSideEffect()
+ * ```
+ *
+ * Actions can return any value or return nothing, and it can receive any number of parameters with different types.
+ * Parameters types and return type can't be lost, which means type-checking must be available at call side.
+ *
+ * State can be accessed and mutated via `this`. Getters can be accessed via `this` but they're read-only.
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */

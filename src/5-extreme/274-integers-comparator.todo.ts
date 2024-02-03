@@ -10,7 +10,6 @@
  * **Note that `a` and `b` can be positive integers or negative integers or zero, even one is positive while another one is negative.**
  *
  *
- * ```
  */
 
 /* _____________ Your Code Here _____________ */
