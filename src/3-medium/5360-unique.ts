@@ -16,7 +16,22 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Unique<T> = any
+type MyEqual<A, B> =
+  (<T>() => T extends A ? 1 : 0) extends
+  (<T>() => T extends B ? 1 : 0) ? true : false;
+
+
+type Includes<L extends unknown[], T> = L extends [infer A, ...infer R]
+  ? MyEqual<A, T> extends true
+    ? true
+    : Includes<R, T>
+  : false;
+
+type Unique<T extends unknown[], O extends unknown[] = []> = T extends [infer A, ...infer R]
+  ? Includes<O, A> extends true
+    ? Unique<R, O>
+    : Unique<R, [...O, A]>
+  : O;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

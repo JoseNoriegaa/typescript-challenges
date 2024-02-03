@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (72/101)
+## Problems (75/98)
 
 ### Warm (1/1) ✅
 
@@ -27,7 +27,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Unshift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3060-unshift.ts)
 - [Parameters](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3312-parameters.ts)
 
-### Medium (56/97)
+### Medium (59/97)
 
 - [Return type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2-return-type.ts)
 - [Omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3-omit.ts)
@@ -77,6 +77,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Bem style string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3326-bem-style-string.ts)
 - [Flip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4179-flip.ts)
 - [Fibonacci sequence](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4182-fibonacci-sequence.ts)
+- [Greater than](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4425-greater-than.ts)
 - [Zip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4471-zip.ts)
 - [Istuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4484-istuple.ts)
 - [Trim right](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4803-trim-right.ts)
@@ -85,6 +86,8 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Indexof](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5153-indexof.ts)
 - [Join](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5310-join.ts)
 - [Lastindexof](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5317-lastindexof.ts)
+- [Unique](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5360-unique.ts)
+- [Maptypes](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5821-maptypes.ts)
 
 ### Hard (1/47)
 
@@ -100,11 +103,8 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [MEDIUM - Permutation](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/296-permutation.todo.ts)
 - [MEDIUM - Inordertraversal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3376-inordertraversal.todo.ts)
 - [MEDIUM - Nomiwase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4260-nomiwase.todo.ts)
-- [MEDIUM - Greater than](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4425-greater-than.todo.ts)
 - [MEDIUM - Chunk](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4499-chunk.todo.ts)
 - [MEDIUM - Fill](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4518-fill.todo.ts)
-- [MEDIUM - Unique](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5360-unique.todo.ts)
-- [MEDIUM - Maptypes](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5821-maptypes.todo.ts)
 - [MEDIUM - Construct tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/7544-construct-tuple.todo.ts)
 - [MEDIUM - Number range](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8640-number-range.todo.ts)
 - [MEDIUM - Combination](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8767-combination.todo.ts)

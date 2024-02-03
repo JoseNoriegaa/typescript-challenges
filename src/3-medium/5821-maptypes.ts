@@ -35,7 +35,16 @@
 
 /* _____________ Your Code Here _____________ */
 
-type MapTypes<T, R> = any
+type Option<From = any, To = any> = { mapFrom: From, mapTo: To };
+
+type MapTypes<T, R extends Option<any, any>> = {
+  [Key in keyof T]: (R extends Option<T[Key]> ? R['mapTo'] : never) extends infer Val
+    ? [Val] extends [never]
+      ? T[Key]
+      : Val
+    : never
+}
+
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
