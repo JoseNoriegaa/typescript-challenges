@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (75/98)
+## Problems (93/80)
 
 ### Warm (1/1) ✅
 
@@ -27,7 +27,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Unshift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3060-unshift.ts)
 - [Parameters](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3312-parameters.ts)
 
-### Medium (59/97)
+### Medium (76/97)
 
 - [Return type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2-return-type.ts)
 - [Omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3-omit.ts)
@@ -80,6 +80,8 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Greater than](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4425-greater-than.ts)
 - [Zip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4471-zip.ts)
 - [Istuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4484-istuple.ts)
+- [Chunk](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4499-chunk.ts)
+- [Fill](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4518-fill.ts)
 - [Trim right](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4803-trim-right.ts)
 - [Without](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5117-without.ts)
 - [Trunc](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5140-trunc.ts)
@@ -88,14 +90,30 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Lastindexof](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5317-lastindexof.ts)
 - [Unique](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5360-unique.ts)
 - [Maptypes](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5821-maptypes.ts)
+- [Construct tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/7544-construct-tuple.ts)
+- [Number range](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8640-number-range.ts)
+- [Checkrepeatedchars](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9142-checkrepeatedchars.ts)
+- [Firstuniquecharindex](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9286-firstuniquecharindex.ts)
+- [Parse url params](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9616-parse-url-params.ts)
+- [Get middle element](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9896-get-middle-element.ts)
+- [Zhao chu mu biao shu zu zhong zhi chu xian guo yi ci de yuan su](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9898-zhao-chu-mu-biao-shu-zu-zhong-zhi-chu-xian-guo-yi-ci-de-yuan-su.ts)
+- [Tong ji shu zu zhong de yuan su ge shu](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9989-tong-ji-shu-zu-zhong-de-yuan-su-ge-shu.ts)
+- [Integer](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/10969-integer.ts)
+- [To primitive](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/16259-to-primitive.ts)
+- [Deepmutable](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/17973-deepmutable.ts)
+- [All](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/18142-all.ts)
+- [Filter](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/18220-filter.ts)
+- [Findall](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21104-findall.ts)
+- [Replace first](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/25170-replace-first.ts)
 
 ### Hard (1/47)
 
 - [Get required](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/57-get-required.ts)
 
-### Extreme (1/15)
+### Extreme (2/15)
 
 - [Query string parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/151-query-string-parser.ts)
+- [Integers comparator](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/274-integers-comparator.ts)
 
  ## Unsolved Problems
 
@@ -103,27 +121,10 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [MEDIUM - Permutation](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/296-permutation.todo.ts)
 - [MEDIUM - Inordertraversal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3376-inordertraversal.todo.ts)
 - [MEDIUM - Nomiwase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4260-nomiwase.todo.ts)
-- [MEDIUM - Chunk](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4499-chunk.todo.ts)
-- [MEDIUM - Fill](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4518-fill.todo.ts)
-- [MEDIUM - Construct tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/7544-construct-tuple.todo.ts)
-- [MEDIUM - Number range](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8640-number-range.todo.ts)
 - [MEDIUM - Combination](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8767-combination.todo.ts)
 - [MEDIUM - Subsequence](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8987-subsequence.todo.ts)
-- [MEDIUM - Checkrepeatedchars](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9142-checkrepeatedchars.todo.ts)
-- [MEDIUM - Firstuniquecharindex](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9286-firstuniquecharindex.todo.ts)
-- [MEDIUM - Parse url params](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9616-parse-url-params.todo.ts)
-- [MEDIUM - Get middle element](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9896-get-middle-element.todo.ts)
-- [MEDIUM - Zhao chu mu biao shu zu zhong zhi chu xian guo yi ci de yuan su](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9898-zhao-chu-mu-biao-shu-zu-zhong-zhi-chu-xian-guo-yi-ci-de-yuan-su.todo.ts)
-- [MEDIUM - Tong ji shu zu zhong de yuan su ge shu](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9989-tong-ji-shu-zu-zhong-de-yuan-su-ge-shu.todo.ts)
-- [MEDIUM - Integer](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/10969-integer.todo.ts)
-- [MEDIUM - To primitive](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/16259-to-primitive.todo.ts)
-- [MEDIUM - Deepmutable](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/17973-deepmutable.todo.ts)
-- [MEDIUM - All](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/18142-all.todo.ts)
-- [MEDIUM - Filter](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/18220-filter.todo.ts)
-- [MEDIUM - Findall](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21104-findall.todo.ts)
 - [MEDIUM - Zu he jian lei xing combination key type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21106-zu-he-jian-lei-xing-combination-key-type.todo.ts)
 - [MEDIUM - Permutations of tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21220-permutations-of-tuple.todo.ts)
-- [MEDIUM - Replace first](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/25170-replace-first.todo.ts)
 - [MEDIUM - Transpose](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/25270-transpose.todo.ts)
 - [MEDIUM - Json schema to typescript](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/26401-json-schema-to-typescript.todo.ts)
 - [MEDIUM - Square](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27133-square.todo.ts)
@@ -186,7 +187,6 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [HARD - Bitwisexor](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/30575-bitwisexor.todo.ts)
 - [EXTREME - Readonly keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/5-readonly-keys.todo.ts)
 - [EXTREME - Slice](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/216-slice.todo.ts)
-- [EXTREME - Integers comparator](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/274-integers-comparator.todo.ts)
 - [EXTREME - Currying 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/462-currying-2.todo.ts)
 - [EXTREME - Sum](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/476-sum.todo.ts)
 - [EXTREME - Multiply](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/517-multiply.todo.ts)

@@ -15,7 +15,19 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Chunk = any
+type Chunk<
+  L extends unknown[],
+  N extends number,
+  O extends unknown[] = [],
+> = N extends 0
+  ? L
+  : L extends [infer A, ...infer R]
+    ? O extends [...infer B, infer C extends unknown[]]
+      ? C['length'] extends N
+        ? Chunk<R, N, [...O, [A]]>
+        : Chunk<R, N, [...B, [...C, A]]>
+      : Chunk<R, N, [[A]]>
+    : O
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

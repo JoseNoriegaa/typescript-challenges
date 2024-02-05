@@ -14,13 +14,64 @@
 
 /* _____________ Your Code Here _____________ */
 
+type MyEqual<A, B> =
+  (<T>() => T extends A ? 1 : 0) extends
+  (<T>() => T extends B ? 1 : 0) ? true : false;
+
+type GreaterThanSingleDigit<A extends number, B extends number, C extends unknown[] = []> = C['length'] extends A
+  ? false
+  : C['length'] extends B
+    ? true
+    : GreaterThanSingleDigit<A, B, [...C, 0]>
+
+type SplitByDigit<T extends (string | number)> = `${T}` extends `${infer N extends number}${infer R}`
+  ? [N, ...SplitByDigit<R>]
+  : []
+
+type FillDigits<A extends unknown[], L extends number> = GreaterThanSingleDigit<L, A['length']> extends true
+  ? FillDigits<[0, ...A], L>
+  : A;
+
+type ComputeGreaterThan<ADigits extends unknown[], BDigits extends unknown[]> =
+  [ADigits, BDigits] extends [[infer A extends number, ...infer ARest], [infer B extends number, ...infer BRest]]
+    ? MyEqual<A, B> extends true
+      ? ComputeGreaterThan<ARest, BRest>
+      : GreaterThanSingleDigit<A, B> extends true
+        ? true
+        : false
+  : false
+
+type GreaterThan<T extends number, U extends number> = [SplitByDigit<T>, SplitByDigit<U>] extends [infer ADigits extends number[], infer BDigits extends number[]]
+  ? ComputeGreaterThan<FillDigits<ADigits, BDigits['length']>, FillDigits<BDigits, ADigits['length']>>
+  : never
+
+type NumberSymbol<A extends number> = `${A}` extends `${infer S}${string}`
+  ? S extends '-'
+    ? '-'
+    : '+'
+  : never
+
 enum Comparison {
   Greater,
   Equal,
   Lower,
 }
 
-type Comparator<A extends number, B extends number> = any
+type Comparator<A extends number, B extends number> = MyEqual<A, B> extends true
+  ? Comparison.Equal
+  : [NumberSymbol<A>, NumberSymbol<B>] extends [infer ASymbol, infer BSymbol]
+    ? [ASymbol, BSymbol] extends ['-', '+']
+      ? Comparison.Lower
+      : [ASymbol, BSymbol] extends ['+', '-']
+        ? Comparison.Greater
+        : [`${A}`, `${B}`] extends [`-${infer AbsA extends number}`, `-${infer AbsB extends number}`]
+          ? GreaterThan<AbsA, AbsB> extends true
+            ? Comparison.Lower
+            : Comparison.Greater
+          : GreaterThan<A, B> extends true
+            ? Comparison.Greater
+            : Comparison.Lower
+    : never
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

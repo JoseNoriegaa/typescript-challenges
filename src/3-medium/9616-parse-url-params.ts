@@ -12,9 +12,22 @@
  *
  */
 
+
 /* _____________ Your Code Here _____________ */
 
-type ParseUrlParams<T> = any
+type SplitBy<S extends string, SplitChar extends string> = S extends `${infer A}${SplitChar}${infer B}`
+  ? [A, ...SplitBy<B, SplitChar>]
+  : S extends ''
+    ? []
+    : [S]
+
+type ExtractUrlParams<L extends string[]> = L extends [infer A, ...infer R extends string[]]
+  ? A extends `:${infer Val}`
+    ? Val | ExtractUrlParams<R>
+    : ExtractUrlParams<R>
+  : never;
+
+type ParseUrlParams<T extends string> = ExtractUrlParams<SplitBy<T, '/'>>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

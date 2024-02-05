@@ -1,7 +1,8 @@
 /**
  * 18142 - All
  *
- * Returns true if all elements of the list are equal to the second parameter passed in, false if there are any mismatches.
+ * Returns true if all elements of the list are equal to the second parameter passed in,
+ * false if there are any mismatches.
  * 
  * For example
  * 
@@ -13,12 +14,18 @@
  * type Todo2 = All<Test2, 1> // should be same as false
  * ```
  *
- *
  */
 
 /* _____________ Your Code Here _____________ */
+type MyEqual<A, B> =
+  (<T>() => T extends A ? 1 : 0) extends
+  (<T>() => T extends B ? 1 : 0) ? true : false;
 
-type All = any
+type All<L extends unknown[], T> = L extends [infer A, ...infer Rest]
+  ? MyEqual<A, T> extends false
+    ? false
+    : All<Rest, T>
+  : true
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

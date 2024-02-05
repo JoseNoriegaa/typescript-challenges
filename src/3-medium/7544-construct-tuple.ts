@@ -9,12 +9,13 @@
  * type result = ConstructTuple<2> // expect to be [unknown, unkonwn]
  * ```
  *
- *
  */
 
 /* _____________ Your Code Here _____________ */
 
-type ConstructTuple<L extends number> = any
+type ConstructTuple<L extends number, Fill = unknown, Output extends Fill[] = []> = L extends Output['length']
+  ? Output
+  : ConstructTuple<L, Fill, [...Output, Fill]>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

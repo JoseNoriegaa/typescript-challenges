@@ -20,7 +20,17 @@ type Fill<
   N,
   Start extends number = 0,
   End extends number = T['length'],
-> = any
+  C extends unknown[] = [],
+  Flag extends boolean = C['length'] extends Start ? true : false
+> = C['length'] extends End
+  ? T
+  : T extends [infer A, ...infer R]
+    ? Flag extends true
+      ? [N, ...Fill<R, N, Start, End, [...C, 0], Flag>]
+      : [A, ...Fill<R, N, Start, End, [...C, 0]>]
+    : T
+
+type R = Fill<[1, 2, 3, 4, 5, 6, 7], true, 0,1>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

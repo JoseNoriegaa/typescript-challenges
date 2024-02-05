@@ -3,12 +3,15 @@
  *
  * Please complete type `Integer<T>`, type `T` inherits from `number`, if `T` is an integer return it, otherwise return `never`.
  *
- *
  */
 
 /* _____________ Your Code Here _____________ */
 
-type Integer<T> = any
+type Integer<T extends number> = `${T}` extends `${number}.${number}`
+  ? never
+  : [T, number] extends [number, T]
+    ? never
+    : T
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
