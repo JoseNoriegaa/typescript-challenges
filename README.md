@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (93/80)
+## Problems (112/61)
 
 ### Warm (1/1) ✅
 
@@ -27,7 +27,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Unshift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3060-unshift.ts)
 - [Parameters](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3312-parameters.ts)
 
-### Medium (76/97)
+### Medium (95/97)
 
 - [Return type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2-return-type.ts)
 - [Omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3-omit.ts)
@@ -45,6 +45,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Replace](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/116-replace.ts)
 - [Replaceall](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/119-replaceall.ts)
 - [Append argument](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/191-append-argument.ts)
+- [Permutation](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/296-permutation.ts)
 - [Length of string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/298-length-of-string.ts)
 - [Flatten](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/459-flatten.ts)
 - [Append to object](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/527-append-to-object.ts)
@@ -75,6 +76,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Flip arguments](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3196-flip-arguments.ts)
 - [Flattendepth](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3243-flattendepth.ts)
 - [Bem style string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3326-bem-style-string.ts)
+- [Inordertraversal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3376-inordertraversal.ts)
 - [Flip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4179-flip.ts)
 - [Fibonacci sequence](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4182-fibonacci-sequence.ts)
 - [Greater than](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4425-greater-than.ts)
@@ -92,6 +94,8 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Maptypes](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/5821-maptypes.ts)
 - [Construct tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/7544-construct-tuple.ts)
 - [Number range](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8640-number-range.ts)
+- [Combination](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8767-combination.ts)
+- [Subsequence](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8987-subsequence.ts)
 - [Checkrepeatedchars](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9142-checkrepeatedchars.ts)
 - [Firstuniquecharindex](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9286-firstuniquecharindex.ts)
 - [Parse url params](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/9616-parse-url-params.ts)
@@ -104,7 +108,22 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [All](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/18142-all.ts)
 - [Filter](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/18220-filter.ts)
 - [Findall](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21104-findall.ts)
+- [Permutations of tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21220-permutations-of-tuple.ts)
 - [Replace first](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/25170-replace-first.ts)
+- [Transpose](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/25270-transpose.ts)
+- [Json schema to typescript](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/26401-json-schema-to-typescript.ts)
+- [Square](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27133-square.ts)
+- [Triangular number](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27152-triangular-number.ts)
+- [Cartesianproduct](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27862-cartesianproduct.ts)
+- [Mergeall](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27932-mergeall.ts)
+- [Checkrepeatedtuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27958-checkrepeatedtuple.ts)
+- [Public type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/28333-public-type.ts)
+- [Extracttoobject](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/29650-extracttoobject.ts)
+- [Deep omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/29785-deep-omit.ts)
+- [Isodd](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30301-isodd.ts)
+- [Tower of hanoi](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30430-tower-of-hanoi.ts)
+- [Pascals triangle](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30958-pascals-triangle.ts)
+- [Shitariteraru](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30970-shitariteraru.ts)
 
 ### Hard (1/47)
 
@@ -118,27 +137,8 @@ Feel free to use these solutions as a reference or inspiration for your own solu
  ## Unsolved Problems
 
 
-- [MEDIUM - Permutation](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/296-permutation.todo.ts)
-- [MEDIUM - Inordertraversal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3376-inordertraversal.todo.ts)
 - [MEDIUM - Nomiwase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4260-nomiwase.todo.ts)
-- [MEDIUM - Combination](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8767-combination.todo.ts)
-- [MEDIUM - Subsequence](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/8987-subsequence.todo.ts)
 - [MEDIUM - Zu he jian lei xing combination key type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21106-zu-he-jian-lei-xing-combination-key-type.todo.ts)
-- [MEDIUM - Permutations of tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21220-permutations-of-tuple.todo.ts)
-- [MEDIUM - Transpose](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/25270-transpose.todo.ts)
-- [MEDIUM - Json schema to typescript](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/26401-json-schema-to-typescript.todo.ts)
-- [MEDIUM - Square](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27133-square.todo.ts)
-- [MEDIUM - Triangular number](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27152-triangular-number.todo.ts)
-- [MEDIUM - Cartesianproduct](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27862-cartesianproduct.todo.ts)
-- [MEDIUM - Mergeall](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27932-mergeall.todo.ts)
-- [MEDIUM - Checkrepeatedtuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/27958-checkrepeatedtuple.todo.ts)
-- [MEDIUM - Public type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/28333-public-type.todo.ts)
-- [MEDIUM - Extracttoobject](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/29650-extracttoobject.todo.ts)
-- [MEDIUM - Deep omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/29785-deep-omit.todo.ts)
-- [MEDIUM - Isodd](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30301-isodd.todo.ts)
-- [MEDIUM - Tower of hanoi](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30430-tower-of-hanoi.todo.ts)
-- [MEDIUM - Pascals triangle](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30958-pascals-triangle.todo.ts)
-- [MEDIUM - Shitariteraru](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30970-shitariteraru.todo.ts)
 - [HARD - Simple vue](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/6-simple-vue.todo.ts)
 - [HARD - Currying 1](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/17-currying-1.todo.ts)
 - [HARD - Union to intersection](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/55-union-to-intersection.todo.ts)

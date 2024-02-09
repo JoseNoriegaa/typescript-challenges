@@ -15,7 +15,12 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Combination<T extends string[]> = any
+
+type Aux<U extends string, A extends U = U> = U extends string
+  ? U | `${U} ${Aux<Exclude<A, U>>}`
+  : never
+
+type Combination<T extends string[]> = Aux<T[number]>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

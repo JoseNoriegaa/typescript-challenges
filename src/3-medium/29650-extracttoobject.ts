@@ -3,9 +3,9 @@
  *
  * Implement a type that extract prop value to the interface. The type takes the two arguments. The output should be an object with the prop values.
  *   Prop value is object.
- * 
+ *
  *   For example
- * 
+ *
  * ```ts
  * type Test = { id: '1', myProp: { foo: '2' }}
  * type Result = ExtractToObject<Test, 'myProp'> // expected to be { id: '1', foo: '2' }
@@ -16,7 +16,12 @@
 
 /* _____________ Your Code Here _____________ */
 
-type ExtractToObject<T, U> = any
+type ExtractToObject<T extends Record<string, unknown>, U extends keyof T> =
+  Omit<{
+    [K in keyof T as K extends U ? never : K]: T[K]
+  } & Pick<T, U>[U], never>;
+
+type R = ExtractToObject<test1, 'myProp'>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

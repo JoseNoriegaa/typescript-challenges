@@ -2,7 +2,7 @@
  * 26401 - JSON Schema to TypeScript
  *
  * Implement the generic type JSONSchema2TS which will return the TypeScript type corresponding to the given JSON schema.
- * 
+ *
  * Additional challenges to handle:
  * * additionalProperties
  * * oneOf, anyOf, allOf
@@ -13,7 +13,31 @@
 
 /* _____________ Your Code Here _____________ */
 
-type JSONSchema2TS<T> = any
+type JSONSchema2TS<T> = T extends { type: 'string' }
+  ? T extends { enum: string[] }
+    ? T['enum'][number]
+    : string
+  : T extends { type: 'number' }
+    ? T extends { enum: number[] }
+      ? T['enum'][number]
+      : number
+    : T extends { type: 'boolean' }
+      ? boolean
+      : T extends { type: 'object' }
+        ? T extends { properties: Record<string, unknown> }
+          ? {
+            [K in keyof T['properties']]?: JSONSchema2TS<T['properties'][K]>
+          } extends infer Obj extends Record<string, unknown>
+            ? T extends { required: string[] }
+              ? Omit<Omit<Obj, T['required'][number]> & Required<Pick<Obj, T['required'][number]>>, never>
+              : Obj
+            : never
+          : Record<string, unknown>
+        : T extends { type: 'array' }
+          ? T extends { items: Record<'type', unknown> }
+            ? JSONSchema2TS<T['items']>[]
+            : unknown[]
+          : never
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

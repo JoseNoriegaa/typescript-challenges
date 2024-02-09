@@ -20,7 +20,39 @@
 
 /* _____________ Your Code Here _____________ */
 
-type IsFixedStringLiteralType<S extends string> = any
+type IsNever<T> = [T] extends [never] ? true : false;
+
+type IsUnion<A, U = A> = IsNever<A> extends true
+  ? false
+  : A extends unknown
+    ? [U] extends [A]
+      ? false
+      : true
+    : never;
+
+type IsEmbedded<T> = string extends T
+  ? true
+  : `${bigint}` extends T
+    ? true
+    : `${number}` extends T
+      ? true
+      : `${boolean}` extends T
+        ? true
+        : `${(string & {})}` extends T
+          ? true
+          : false;
+
+type IsFixedStringLiteralType<S extends string> = IsNever<S> extends true
+  ? false
+  : IsUnion<S> extends true
+    ? false
+    : S extends `${infer A}${infer Rest extends string}`
+      ? IsEmbedded<A> extends true
+        ? false
+        : Rest extends ''
+          ? true
+          : IsFixedStringLiteralType<Rest>
+      : false
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
