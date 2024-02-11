@@ -17,6 +17,7 @@
 
 type GetOptional<T> = any
 
+type S = GetOptional<{ foo: number, bar?: string }>;
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 

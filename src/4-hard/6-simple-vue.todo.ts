@@ -42,7 +42,19 @@
 
 /* _____________ Your Code Here _____________ */
 
-declare function SimpleVue(options: any): any
+type MapComputed<Computed> = {
+  [Prop in keyof Computed]: Computed[Prop] extends (...args: unknown[]) => infer R
+    ? R
+    : never;
+}
+
+type Options<Data, Computed, Methods> = {
+  data: (this: void) => Data;
+  computed: Computed & ThisType<Data & MapComputed<Computed>>;
+  methods: Methods & ThisType<Data & MapComputed<Computed> & Methods>;
+}
+
+declare function SimpleVue<D, C, M>(options: Options<D, C, M>): unknown
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

@@ -1,7 +1,11 @@
 /**
  * 9160 - Assign
  *
- * You have a target object and a source array of objects. You need to copy property from source to target, if it has the same property as the source, you should always keep the source property, and drop the target property. (Inspired by the `Object.assign` API)
+ * You have a target object and a source array of objects.
+ * You need to copy property from source to target, if it has the
+ * same property as the source,
+ * you should always keep the source property,
+ * and drop the target property. (Inspired by the `Object.assign` API)
  * 
  * ### example
  * 
@@ -56,7 +60,19 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Assign<T extends Record<string, unknown>, U> = any
+type Assign<T extends Record<string, unknown>, U extends unknown[]> = U extends [infer A, ...infer Rest]
+  ? A extends Record<string, unknown>
+    ? (keyof T | keyof A) extends infer Keys extends PropertyKey
+      ? Assign<{
+        [K in Keys]: K extends keyof A
+          ? A[K]
+          : K extends keyof T
+            ? T[K]
+            : never
+      }, Rest>
+      : never
+    : Assign<T, Rest>
+  : T
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

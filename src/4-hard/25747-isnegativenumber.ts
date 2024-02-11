@@ -18,7 +18,19 @@
 
 /* _____________ Your Code Here _____________ */
 
-type IsNegativeNumber<T extends number> = any
+type IsUnion<T, U = T> = T extends unknown
+  ? [U] extends [T]
+    ? false
+    : true
+  : never;
+
+type IsNegativeNumber<T extends number> = number extends T
+  ? never
+  : IsUnion<T> extends true
+    ? never
+    : `${T}` extends `-${number}`
+      ? true
+      : false;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

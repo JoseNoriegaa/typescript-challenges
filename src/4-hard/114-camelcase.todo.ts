@@ -16,7 +16,13 @@
 
 /* _____________ Your Code Here _____________ */
 
-type CamelCase<S extends string> = any
+type Aux<S extends string, O extends string = ''> = S extends `${infer A}${infer B}`
+  ? A extends '_'
+    ? Aux<Capitalize<B>, O>
+    : Aux<B, `${O}${A}`>
+  : O
+
+type CamelCase<S extends string> = Aux<Lowercase<S>>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

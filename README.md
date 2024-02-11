@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (112/61)
+## Problems (129/44)
 
 ### Warm (1/1) ✅
 
@@ -27,7 +27,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Unshift](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3060-unshift.ts)
 - [Parameters](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/2-easy/3312-parameters.ts)
 
-### Medium (95/97)
+### Medium (97/97) ✅
 
 - [Return type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/2-return-type.ts)
 - [Omit](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3-omit.ts)
@@ -79,6 +79,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Inordertraversal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/3376-inordertraversal.ts)
 - [Flip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4179-flip.ts)
 - [Fibonacci sequence](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4182-fibonacci-sequence.ts)
+- [Nomiwase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4260-nomiwase.ts)
 - [Greater than](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4425-greater-than.ts)
 - [Zip](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4471-zip.ts)
 - [Istuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4484-istuple.ts)
@@ -108,6 +109,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [All](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/18142-all.ts)
 - [Filter](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/18220-filter.ts)
 - [Findall](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21104-findall.ts)
+- [Zu he jian lei xing combination key type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21106-zu-he-jian-lei-xing-combination-key-type.ts)
 - [Permutations of tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21220-permutations-of-tuple.ts)
 - [Replace first](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/25170-replace-first.ts)
 - [Transpose](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/25270-transpose.ts)
@@ -125,9 +127,24 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Pascals triangle](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30958-pascals-triangle.ts)
 - [Shitariteraru](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30970-shitariteraru.ts)
 
-### Hard (1/47)
+### Hard (16/47)
 
 - [Get required](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/57-get-required.ts)
+- [Capitalizewords](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/112-capitalizewords.ts)
+- [C printf parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/147-c-printf-parser.ts)
+- [Vue basic props](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/213-vue-basic-props.ts)
+- [String to number](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/300-string-to-number.ts)
+- [Tuple filter](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/399-tuple-filter.ts)
+- [Length of string 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/651-length-of-string-2.ts)
+- [String join](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/847-string-join.ts)
+- [Pinia](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/1290-pinia.ts)
+- [Camelize](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/1383-camelize.ts)
+- [Drop string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2059-drop-string.ts)
+- [Split](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2822-split.ts)
+- [Assign](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9160-assign.ts)
+- [Capitalize nest object keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9775-capitalize-nest-object-keys.ts)
+- [Snakecase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/19458-snakecase.ts)
+- [Isnegativenumber](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/25747-isnegativenumber.ts)
 
 ### Extreme (2/15)
 
@@ -137,33 +154,21 @@ Feel free to use these solutions as a reference or inspiration for your own solu
  ## Unsolved Problems
 
 
-- [MEDIUM - Nomiwase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/4260-nomiwase.todo.ts)
-- [MEDIUM - Zu he jian lei xing combination key type](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/21106-zu-he-jian-lei-xing-combination-key-type.todo.ts)
+
 - [HARD - Simple vue](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/6-simple-vue.todo.ts)
 - [HARD - Currying 1](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/17-currying-1.todo.ts)
 - [HARD - Union to intersection](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/55-union-to-intersection.todo.ts)
 - [HARD - Get optional](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/59-get-optional.todo.ts)
 - [HARD - Required keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/89-required-keys.todo.ts)
 - [HARD - Optional keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/90-optional-keys.todo.ts)
-- [HARD - Capitalizewords](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/112-capitalizewords.todo.ts)
 - [HARD - Camelcase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/114-camelcase.todo.ts)
-- [HARD - C printf parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/147-c-printf-parser.todo.ts)
-- [HARD - Vue basic props](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/213-vue-basic-props.todo.ts)
 - [HARD - Isany](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/223-isany.todo.ts)
 - [HARD - Typed get](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/270-typed-get.todo.ts)
-- [HARD - String to number](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/300-string-to-number.todo.ts)
-- [HARD - Tuple filter](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/399-tuple-filter.todo.ts)
 - [HARD - Tuple to enum object](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/472-tuple-to-enum-object.todo.ts)
 - [HARD - Printf](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/545-printf.todo.ts)
 - [HARD - Deep object to unique](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/553-deep-object-to-unique.todo.ts)
-- [HARD - Length of string 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/651-length-of-string-2.todo.ts)
 - [HARD - Union to tuple](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/730-union-to-tuple.todo.ts)
-- [HARD - String join](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/847-string-join.todo.ts)
 - [HARD - Deeppick](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/956-deeppick.todo.ts)
-- [HARD - Pinia](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/1290-pinia.todo.ts)
-- [HARD - Camelize](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/1383-camelize.todo.ts)
-- [HARD - Drop string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2059-drop-string.todo.ts)
-- [HARD - Split](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2822-split.todo.ts)
 - [HARD - Classpublickeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2828-classpublickeys.todo.ts)
 - [HARD - Isrequiredkey](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2857-isrequiredkey.todo.ts)
 - [HARD - Objectfromentries](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2949-objectfromentries.todo.ts)
@@ -174,15 +179,11 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [HARD - Object key paths](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/7258-object-key-paths.todo.ts)
 - [HARD - Two sum](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/8804-two-sum.todo.ts)
 - [HARD - Validdate](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9155-validdate.todo.ts)
-- [HARD - Assign](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9160-assign.todo.ts)
 - [HARD - Maximum](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9384-maximum.todo.ts)
-- [HARD - Capitalize nest object keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9775-capitalize-nest-object-keys.todo.ts)
 - [HARD - Replace union](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/13580-replace-union.todo.ts)
 - [HARD - Fizzbuzz](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/14080-fizzbuzz.todo.ts)
 - [HARD - Run length encoding](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/14188-run-length-encoding.todo.ts)
 - [HARD - Tree path array](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/15260-tree-path-array.todo.ts)
-- [HARD - Snakecase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/19458-snakecase.todo.ts)
-- [HARD - Isnegativenumber](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/25747-isnegativenumber.todo.ts)
 - [HARD - Optionalundefined](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/28143-optionalundefined.todo.ts)
 - [HARD - Bitwisexor](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/30575-bitwisexor.todo.ts)
 - [EXTREME - Readonly keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/5-readonly-keys.todo.ts)

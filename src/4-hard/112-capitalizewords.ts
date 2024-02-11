@@ -15,7 +15,12 @@
 
 /* _____________ Your Code Here _____________ */
 
-type CapitalizeWords<S extends string> = any
+type CapitalizeWords<S extends string, O extends string = ''> = S extends `${infer A}${infer B}`
+  // If uppercase A extends lowercase A that means that is not a letter
+  ? Uppercase<A> extends Lowercase<A>
+    ? CapitalizeWords<Capitalize<B>, `${O}${A}`>
+    : CapitalizeWords<B, `${O}${A}`>
+  : Capitalize<O>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

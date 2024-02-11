@@ -24,12 +24,23 @@
  *
  * Accessing arrays is not required in this challenge.
  *
- *
  */
 
 /* _____________ Your Code Here _____________ */
 
-type Get<T, K> = string
+type ParsePath<S extends string> = S extends `${infer A}.${infer B}`
+  ? [A, ...ParsePath<B>]
+  : [S];
+
+type Get<
+  T,
+  K extends string,
+  Path extends string[] = ParsePath<K>
+> = Path extends [infer Key, ...infer Rest extends string[]]
+  ? Key extends keyof T
+    ? Get<T[Key], K, Rest>
+    : never
+  : T;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

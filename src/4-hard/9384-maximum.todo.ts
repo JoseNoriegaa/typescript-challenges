@@ -24,7 +24,11 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Maximum<T extends any[]> = any
+type Maximum<T extends number[]> = {
+  [K in keyof T as T[K] extends number ? T[K] : never]: 0
+}
+
+type R = Maximum<[500, 1, 20, 200, 150]>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

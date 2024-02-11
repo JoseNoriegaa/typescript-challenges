@@ -3,7 +3,8 @@
  *
  * **This challenge continues from [6 - Simple Vue](//tsch.js.org/6), you should finish that one first, and modify your code based on it to start this challenge**.
  *
- * In addition to the Simple Vue, we are now having a new `props` field in the options. This is a simplified version of Vue's `props` option. Here are some of the rules.
+ * In addition to the Simple Vue, we are now having a new `props` field in the options.
+ * This is a simplified version of Vue's `props` option. Here are some of the rules.
  *
  * `props` is an object containing each field as the key of the real props injected into `this`. The injected props will be accessible in all the context including `data`, `computed`, and `methods`.
  *
@@ -45,7 +46,50 @@
 
 /* _____________ Your Code Here _____________ */
 
-declare function VueBasicProps(options: any): any
+type MapComputedProps<C> = {
+  [K in keyof C]: C[K] extends (...arg: unknown[]) => infer R ? R : never
+}
+
+type GetPropType<T> = T extends unknown
+  ? T extends StringConstructor
+    ? string
+    : T extends BooleanConstructor
+      ? boolean
+      : T extends NumberConstructor
+        ? number
+        : T extends RegExpConstructor
+          ? RegExp
+          : T extends Array<unknown>
+            ? GetPropType<T[number]>
+            : T extends (new (...args: unknown[]) => infer R)
+              ? R
+              : T
+  : never;
+
+type MapProps<Props> = {
+  [K in keyof Props]: Props[K] extends { type: unknown }
+    ? GetPropType<Props[K]['type']>
+    : {} extends Props[K]
+      ? any
+      : GetPropType<Props[K]>
+}
+
+type Options<Props, Data, Computed, Methods> =
+  (MapProps<Props> & MapComputedProps<Computed> & Data & Methods) extends infer Context
+    ? {
+      props: Props;
+      data: (this: MapProps<Props>) => Data;
+      computed: Computed & ThisType<Context>;
+      methods: Methods & ThisType<Context>;
+    }
+    : never;
+
+declare function VueBasicProps<
+  Props,
+  Data,
+  Computed,
+  Methods,
+>(options: Options<Props, Data, Computed, Methods>): any
 
 /* _____________ Test Cases _____________ */
 import type { Debug, Equal, Expect, IsAny } from '@type-challenges/utils'
@@ -63,6 +107,8 @@ VueBasicProps({
   },
   data(this) {
     type PropsType = Debug<typeof this>
+    type A = PropsType['propD']
+
     type cases = [
       Expect<IsAny<PropsType['propA']>>,
       Expect<Equal<PropsType['propB'], string>>,
@@ -101,6 +147,7 @@ VueBasicProps({
     test() {
       const fullname = this.fullname
       const propE = this.propE
+
       type cases = [
         Expect<Equal<typeof fullname, string>>,
         Expect<Equal<typeof propE, string | number>>,

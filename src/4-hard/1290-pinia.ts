@@ -1,7 +1,8 @@
 /**
  * 1290 - Pinia
  *
- * Create a type-level function whose types is similar to [Pinia](https://github.com/posva/pinia) library. You don't need to implement function actually, just adding types.
+ * Create a type-level function whose types is similar to [Pinia](https://github.com/posva/pinia) library.
+ * You don't need to implement function actually, just adding types.
  *
  * ### Overview
  *
@@ -73,7 +74,22 @@
 
 /* _____________ Your Code Here _____________ */
 
-declare function defineStore(store: unknown): unknown
+type MapGetters<G> = {
+  [K in keyof G]: G[K] extends (...args: unknown[]) => infer R ? R : never;
+}
+
+type Options<State, Getters, Actions> = {
+  id: string,
+  state: () => State,
+  getters: Getters & ThisType<Readonly<State> & MapGetters<Getters>>;
+  actions: Actions & ThisType<State & Actions>;
+}
+
+declare function defineStore<
+  State,
+  Getters,
+  Actions
+>(store: Options<State, Getters, Actions>): Actions & State & MapGetters<Getters>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

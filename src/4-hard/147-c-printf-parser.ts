@@ -7,7 +7,8 @@
  * printf("The result is %d.", 42);
  * ```
  *
- * This challenge requires you to parse the input string and extract the format placeholders like `%d` and `%f`. For example, if the input string is `"The result is %d."`, the parsed result is a tuple `['dec']`.
+ * This challenge requires you to parse the input string and extract the format placeholders like `%d` and `%f`.
+ * For example, if the input string is `"The result is %d."`, the parsed result is a tuple `['dec']`.
  *
  * Here is the mapping:
  *
@@ -23,7 +24,6 @@
  * }
  * ```
  *
- *
  */
 
 /* _____________ Your Code Here _____________ */
@@ -38,7 +38,17 @@ type ControlsMap = {
   p: 'pointer'
 }
 
-type ParsePrintFormat = any
+type RemoveDoubleSymbol<S extends string> = S extends `${infer A}%%${infer B}`
+  ? `${A}${RemoveDoubleSymbol<B>}`
+  : S;
+
+type Aux<S extends string> = S extends `${string}%${infer A}${infer Rest}`
+  ? A extends keyof ControlsMap
+    ? [ControlsMap[A], ...Aux<Rest>]
+    : Aux<Rest>
+  : [];
+
+type ParsePrintFormat<S extends string> = Aux<RemoveDoubleSymbol<S>>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

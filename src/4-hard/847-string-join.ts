@@ -28,7 +28,13 @@
 
 /* _____________ Your Code Here _____________ */
 
-declare function join(delimiter: any): (...parts: any[]) => any
+type Join<Parts extends string[], Delimiter extends string = ''> = Parts extends [infer A extends string, ...infer Rest extends string[]]
+  ? Rest extends []
+    ? A
+    : `${A}${Delimiter}${Join<Rest, Delimiter>}`
+  : ''
+
+declare function join<D extends string>(delimiter: D): <P extends string[]>(...parts: P) => Join<P, D>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

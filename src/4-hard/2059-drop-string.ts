@@ -9,13 +9,24 @@
  * type Butterfly = DropString<'foobar!', 'fb'> // 'ooar!'
  * ```
  *
- *
- * <!--info-footer-start--><br><a href="../../README.md" target="_blank"><img src="https://img.shields.io/badge/-Back-grey" alt="Back"/></a> <a href="https://tsch.js.org/2059/answer" target="_blank"><img src="https://img.shields.io/badge/-Share%20your%20Solutions-teal" alt="Share your Solutions"/></a> <a href="https://tsch.js.org/2059/solutions" target="_blank"><img src="https://img.shields.io/badge/-Check%20out%20Solutions-de5a77?logo=awesome-lists&logoColor=white" alt="Check out Solutions"/></a> <hr><h3>Related Challenges</h3><a href="https://github.com/type-challenges/type-challenges/blob/main/questions/02070-medium-drop-char/README.md" target="_blank"><img src="https://img.shields.io/badge/-2070%E3%83%BBDrop%20Char-d9901a" alt="2070・Drop Char"/></a> <!--info-footer-end-->
  */
 
 /* _____________ Your Code Here _____________ */
 
-type DropString<S, R> = any
+type StringToUnion<S> = S extends `${infer A}${infer B}`
+  ? A | StringToUnion<B>
+  : never;
+
+type DropString<
+  S extends string,
+  R extends string,
+  U extends string = StringToUnion<R>> = [U] extends [never]
+  ? S
+  : S extends `${infer A}${infer B}`
+    ? A extends U
+      ? DropString<B, R, U>
+      : `${A}${DropString<B, R, U>}`
+    : S;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
