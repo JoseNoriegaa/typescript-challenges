@@ -15,7 +15,19 @@
 
 /* _____________ Your Code Here _____________ */
 
-type IsPalindrome<T> = any
+type Split<S extends string> = S extends `${infer A}${infer R}`
+  ? [A, ...Split<R>]
+  : [];
+
+type Reverse<L extends unknown[]> = L extends [...infer R, infer L]
+  ? [L, ...Reverse<R>]
+  : []
+
+type IsPalindrome<T extends number | string> = Split<`${T}`> extends infer Chars extends string[]
+  ? Chars extends Reverse<Chars>
+    ? true
+    : false
+  : never
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

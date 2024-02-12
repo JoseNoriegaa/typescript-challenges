@@ -11,7 +11,11 @@
 
 /* _____________ Your Code Here _____________ */
 
-type IsAny<T> = any
+type MyEqual<A, B> =
+  (<T>() => T extends A ? 1 : 0) extends
+  (<T>() => T extends B ? 1 : 0) ? true : false;
+
+type IsAny<T> = MyEqual<T, any>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

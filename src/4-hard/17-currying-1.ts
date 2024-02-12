@@ -24,7 +24,17 @@
 
 /* _____________ Your Code Here _____________ */
 
-declare function Currying(fn: any): any
+type LinkAsFn<Args extends unknown[], LastReturn = never> = Args extends [infer Arg, ...infer Rest]
+  ? (arg: Arg) => LinkAsFn<Rest, LastReturn>
+  : LastReturn;
+
+type Aux<Fns> = Fns extends (...args: infer Args) => infer R
+  ? Args extends []
+    ? () => R
+    : LinkAsFn<Args, R>
+  : never;
+
+declare function Currying<Fns>(fn: Fns): Aux<Fns>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

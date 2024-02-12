@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (129/44)
+## Problems (133/40)
 
 ### Warm (1/1) ✅
 
@@ -127,12 +127,15 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Pascals triangle](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30958-pascals-triangle.ts)
 - [Shitariteraru](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30970-shitariteraru.ts)
 
-### Hard (16/47)
+### Hard (20/47)
 
+- [Simple vue](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/6-simple-vue.ts)
+- [Currying 1](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/17-currying-1.ts)
 - [Get required](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/57-get-required.ts)
 - [Capitalizewords](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/112-capitalizewords.ts)
 - [C printf parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/147-c-printf-parser.ts)
 - [Vue basic props](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/213-vue-basic-props.ts)
+- [Isany](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/223-isany.ts)
 - [String to number](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/300-string-to-number.ts)
 - [Tuple filter](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/399-tuple-filter.ts)
 - [Length of string 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/651-length-of-string-2.ts)
@@ -141,6 +144,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Camelize](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/1383-camelize.ts)
 - [Drop string](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2059-drop-string.ts)
 - [Split](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2822-split.ts)
+- [Ispalindrome](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/4037-ispalindrome.ts)
 - [Assign](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9160-assign.ts)
 - [Capitalize nest object keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9775-capitalize-nest-object-keys.ts)
 - [Snakecase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/19458-snakecase.ts)
@@ -155,14 +159,11 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 
 
 
-- [HARD - Simple vue](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/6-simple-vue.todo.ts)
-- [HARD - Currying 1](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/17-currying-1.todo.ts)
 - [HARD - Union to intersection](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/55-union-to-intersection.todo.ts)
 - [HARD - Get optional](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/59-get-optional.todo.ts)
 - [HARD - Required keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/89-required-keys.todo.ts)
 - [HARD - Optional keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/90-optional-keys.todo.ts)
 - [HARD - Camelcase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/114-camelcase.todo.ts)
-- [HARD - Isany](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/223-isany.todo.ts)
 - [HARD - Typed get](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/270-typed-get.todo.ts)
 - [HARD - Tuple to enum object](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/472-tuple-to-enum-object.todo.ts)
 - [HARD - Printf](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/545-printf.todo.ts)
@@ -172,7 +173,6 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [HARD - Classpublickeys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2828-classpublickeys.todo.ts)
 - [HARD - Isrequiredkey](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2857-isrequiredkey.todo.ts)
 - [HARD - Objectfromentries](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/2949-objectfromentries.todo.ts)
-- [HARD - Ispalindrome](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/4037-ispalindrome.todo.ts)
 - [HARD - Mutable keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/5181-mutable-keys.todo.ts)
 - [HARD - Intersection](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/5423-intersection.todo.ts)
 - [HARD - Binary to decimal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/6141-binary-to-decimal.todo.ts)
