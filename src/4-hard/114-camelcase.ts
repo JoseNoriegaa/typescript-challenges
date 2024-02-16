@@ -16,13 +16,13 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Aux<S extends string, O extends string = ''> = S extends `${infer A}${infer B}`
-  ? A extends '_'
-    ? Aux<Capitalize<B>, O>
-    : Aux<B, `${O}${A}`>
-  : O
+type IsLetter<S extends string> = Lowercase<S> extends Uppercase<S> ? false : true;
 
-type CamelCase<S extends string> = Aux<Lowercase<S>>;
+type CamelCase<S extends string> = S extends `${infer Left}_${infer Right}${infer Rest}`
+  ? IsLetter<Right> extends true
+    ? `${Lowercase<Left>}${Uppercase<Right>}${CamelCase<Rest>}`
+    : `${Left}_${CamelCase<`${Right}${Rest}`>}`
+  : Lowercase<S>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

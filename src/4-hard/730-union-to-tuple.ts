@@ -3,16 +3,21 @@
  *
  * Implement a type, `UnionToTuple`, that converts a union to a tuple.
  *
- * As we know, union is an unordered structure, but tuple is an ordered, which implies that we are not supposed to preassume any order will be preserved between terms of one union, when unions are created or transformed. 
+ * As we know, union is an unordered structure, but tuple is an ordered,
+ * which implies that we are not supposed to preassume any order will be
+ * preserved between terms of one union, when unions are created or
+ * transformed.
  *
- * Hence in this challenge, **any permutation of the elements in the output tuple is acceptable**.
+ * Hence in this challenge,
+ * **any permutation of the elements in the output tuple is acceptable**.
  *
- * Your type should resolve to one of the following two types, but ***NOT*** a union of them!
+ * Your type should resolve to one of the following two types,
+ * but ***NOT*** a union of them!
  * ```ts
  * UnionToTuple<1>           // [1], and correct
  * UnionToTuple<'any' | 'a'> // ['any','a'], and correct
  * ```
- * or 
+ * or
  * ```ts
  * UnionToTuple<'any' | 'a'> // ['a','any'], and correct
  * ```
@@ -38,6 +43,22 @@
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
+
+type UnionToIntersection<U> = (U extends unknown ? (x: (a: U) => 0) => 0 : never) extends (x: infer A) => 0
+  ? A
+  : never
+
+type LastFromIntersection<T> = T extends (x: infer R) => 0
+ ? R
+ : never
+
+type Aux<U, O extends unknown[] = []> = [U] extends [never]
+  ? O
+  : LastFromIntersection<UnionToIntersection<U>> extends infer Last
+    ? Aux<Exclude<U, Last>, [Last, ...O]>
+    : never
+
+type UnionToTuple<U> = Aux<U>;
 
 type ExtractValuesOfTuple<T extends any[]> = T[keyof T & number]
 

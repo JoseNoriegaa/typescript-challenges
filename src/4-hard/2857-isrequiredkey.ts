@@ -16,7 +16,9 @@
 
 /* _____________ Your Code Here _____________ */
 
-type IsRequiredKey<T, K extends keyof T> = any
+type IsRequiredKey<T, K extends keyof T, F extends Required<T> = Required<T>> = T[K] extends F[K]
+  ? true
+  : false;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

@@ -16,7 +16,17 @@
 
 /* _____________ Your Code Here _____________ */
 
-type OptionalUndefined<T, Props> = any
+type OptionalUndefined<T, Props extends keyof T = keyof T> = {
+  [
+    Key in keyof T as Key extends Props
+      ? undefined extends T[Key]
+        ? Key
+        : never
+      : never
+  ]?: T[Key]
+} extends infer OptionalObj extends object
+  ? Omit<Omit<T, keyof OptionalObj> & OptionalObj, never>
+  : never
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

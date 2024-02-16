@@ -12,13 +12,23 @@
  * type FormatCase4 = Format<"sd%abc"> // FormatCase4 :  string
  * ```
  *
- *
- * <!--info-footer-start--><br><a href="../../README.md" target="_blank"><img src="https://img.shields.io/badge/-Back-grey" alt="Back"/></a> <a href="https://tsch.js.org/545/answer" target="_blank"><img src="https://img.shields.io/badge/-Share%20your%20Solutions-teal" alt="Share your Solutions"/></a> <a href="https://tsch.js.org/545/solutions" target="_blank"><img src="https://img.shields.io/badge/-Check%20out%20Solutions-de5a77?logo=awesome-lists&logoColor=white" alt="Check out Solutions"/></a> <!--info-footer-end-->
  */
 
 /* _____________ Your Code Here _____________ */
 
-type Format<T extends string> = any
+type RemoveDoubles<S extends string> = S extends `${infer A}%%${infer B}`
+  ? `${A}${RemoveDoubles<B>}`
+  : S;
+
+type Aux<T extends string> = T extends `%s${infer Rest}`
+  ? (arg: string) => Format<Rest>
+  : T extends `%d${infer Rest}`
+    ? (arg: number) => Format<Rest>
+    : T extends `${infer A}${infer Rest}`
+      ? Format<Rest>
+      : string
+
+type Format<T extends string> = Aux<RemoveDoubles<T>>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

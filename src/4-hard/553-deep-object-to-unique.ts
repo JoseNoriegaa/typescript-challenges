@@ -1,11 +1,13 @@
 /**
  * 553 - Deep object to unique
  *
- * TypeScript has structural type system, but sometimes you want a function to accept only some previously well-defined unique objects (as in the nominal type system), and not any objects that have the required fields.
+ * TypeScript has structural type system, but sometimes you want a function to accept only some previously well-defined
+ * unique objects (as in the nominal type system), and not any objects that have the required fields.
  *
- * Create a type that takes an object and makes it and all deeply nested objects in it unique, while preserving the string and numeric keys of all objects, and the values of all properties on these keys.
+ * Create a type that takes an object and makes it and all deeply nested objects in it unique,
+ * while preserving the string and numeric keys of all objects, and the values of all properties on these keys.
  *
- * The original type and the resulting unique type must be mutually assignable, but not identical. 
+ * The original type and the resulting unique type must be mutually assignable, but not identical.
  *
  * For example,
  *
@@ -34,7 +36,11 @@
 
 /* _____________ Your Code Here _____________ */
 
-type DeepObjectToUniq<O extends object> = any
+type DeepObjectToUniq<O extends object, F extends unknown[] = []> = Omit<{
+  [K in keyof O]: O[K] extends object
+    ? DeepObjectToUniq<O[K], [...F, [K, O]]>
+    : O[K]
+} & { readonly [K in symbol]?: F }, never>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, IsFalse, IsTrue } from '@type-challenges/utils'

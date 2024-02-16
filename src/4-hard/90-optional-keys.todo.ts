@@ -9,7 +9,13 @@
 
 /* _____________ Your Code Here _____________ */
 
-type OptionalKeys<T> = any
+type OptionalKeys<
+  T,
+  F extends Required<T> = Required<T>,
+  Keys extends keyof T = keyof T
+> = keyof {
+  [K in Keys as T[K] extends F[K] ? never : K]: never
+};
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

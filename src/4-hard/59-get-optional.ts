@@ -15,9 +15,14 @@
 
 /* _____________ Your Code Here _____________ */
 
-type GetOptional<T> = any
+type GetOptional<
+  T extends Record<string, unknown>,
+  K extends keyof T = keyof T,
+  F extends Required<T> = Required<T>
+> = {
+  [Key in K as T[Key] extends F[Key] ? never : Key]: T[Key]
+}
 
-type S = GetOptional<{ foo: number, bar?: string }>;
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
 

@@ -12,12 +12,19 @@
  * type T3 = ObjectKeyPaths<{ books: [{ name: string; price: number }] }>; // expected to be the superset of 'books' | 'books.0' | 'books[0]' | 'books.[0]' | 'books.0.name' | 'books.0.price' | 'books.length' | 'books.find'
  * ```
  *
- *
  */
 
 /* _____________ Your Code Here _____________ */
 
-type ObjectKeyPaths<T extends object> = any
+type ObjectKeyPaths<T extends object, Prefix extends string = ''> = keyof T extends infer Key extends string
+  ? Key extends keyof T
+    ? T[Key] extends Record<string, unknown>
+      ? `${Prefix}${Key}` | ObjectKeyPaths<T[Key], `${Prefix}${Key}.`>
+      : `${Prefix}${Key}`
+    : never
+  : never;
+
+type S = ObjectKeyPaths<typeof ref>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect, ExpectExtends } from '@type-challenges/utils'

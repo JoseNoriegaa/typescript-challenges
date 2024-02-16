@@ -16,7 +16,7 @@
  *   },
  *   hello: 'world'
  * }
- *   
+ *
  * type A = Get<Data, 'hello'> // 'world'
  * type B = Get<Data, 'foo.bar.count'> // 6
  * type C = Get<Data, 'foo.bar'> // { value: 'foobar', count: 6 }
@@ -28,19 +28,14 @@
 
 /* _____________ Your Code Here _____________ */
 
-type ParsePath<S extends string> = S extends `${infer A}.${infer B}`
-  ? [A, ...ParsePath<B>]
-  : [S];
-
-type Get<
-  T,
-  K extends string,
-  Path extends string[] = ParsePath<K>
-> = Path extends [infer Key, ...infer Rest extends string[]]
-  ? Key extends keyof T
-    ? Get<T[Key], K, Rest>
+type Get<T, K extends string> = K extends keyof T
+  ? T[K]
+  : K extends `${infer Key}.${infer Rest}`
+    ? Key extends keyof T
+      ? Get<T[Key], Rest>
+      : never
     : never
-  : T;
+
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

@@ -1,11 +1,11 @@
 /**
  * 15260 - Tree path array
- * 
+ *
  * Create a type `Path` that represents validates a possible path of a tree under the form of an array.
- * 
+ *
  * Related challenges:
  * - [Object key path](https://github.com/type-challenges/type-challenges/blob/main/questions/07258-hard-object-key-paths/README.md)
- * 
+ *
  * ```ts
  * declare const example: {
  *     foo: {
@@ -18,8 +18,8 @@
  *         }
  *     };
  * }
- * 
- * // Possible solutions: 
+ *
+ * // Possible solutions:
  * // []
  * // ['foo']
  * // ['foo', 'bar']
@@ -28,13 +28,19 @@
  * // ['foo', 'baz', 'b']
  * // ['foo', 'baz', 'c']
  * ```
- * 
- * 
+ *
+ *
  */
 
 /* _____________ Your Code Here _____________ */
 
-type Path<T> = any
+type Path<T, K extends keyof T = keyof T, Prefix extends string[] = []> = K extends string
+  ? T[K] extends Record<string, unknown>
+    ? [...Prefix, K] | Path<T[K], keyof T[K], [...Prefix, K]>
+    : [...Prefix, K]
+  : never;
+
+type R = Path<typeof example['foo']>;
 
 /* _____________ Test Cases _____________ */
 import type { ExpectExtends, ExpectFalse, ExpectTrue } from '@type-challenges/utils'

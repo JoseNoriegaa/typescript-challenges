@@ -14,7 +14,12 @@
 
 /* _____________ Your Code Here _____________ */
 
-type UnionToIntersection<U> = any
+type UnionToIntersection<U> =
+  (U extends unknown ? (arg: U) => unknown : never) extends
+  (arg: infer T) => unknown ? T : never
+
+
+type S = UnionToIntersection<'foo' | 42 | true>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

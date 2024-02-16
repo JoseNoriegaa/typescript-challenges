@@ -9,14 +9,14 @@
  *
  * ```ts
  * type obj = {
- *   name: 'hoge', 
+ *   name: 'hoge',
  *   age: 20,
  *   friend: {
  *     name: 'fuga',
  *     age: 30,
  *     family: {
- *       name: 'baz',  
- *       age: 1 
+ *       name: 'baz',
+ *       age: 1
  *     }
  *   }
  * }
@@ -26,14 +26,26 @@
  * type T3 = DeepPick<obj, 'name' | 'friend.name' |  'friend.family.name'>  // { name : 'hoge' } &  { friend: { name: 'fuga' }} & { friend: { family: { name: 'baz' }}}
  *
  * ```
- *
- *
- * <!--info-footer-start--><br><a href="../../README.md" target="_blank"><img src="https://img.shields.io/badge/-Back-grey" alt="Back"/></a> <a href="https://tsch.js.org/956/answer" target="_blank"><img src="https://img.shields.io/badge/-Share%20your%20Solutions-teal" alt="Share your Solutions"/></a> <a href="https://tsch.js.org/956/solutions" target="_blank"><img src="https://img.shields.io/badge/-Check%20out%20Solutions-de5a77?logo=awesome-lists&logoColor=white" alt="Check out Solutions"/></a> <!--info-footer-end-->
  */
 
 /* _____________ Your Code Here _____________ */
 
-type DeepPick = any
+
+type Aux<T, K extends string> = K extends keyof T
+  ? { [_K in K]: T[_K] }
+  : K extends `${infer Key}.${infer Rest}`
+    ? Key extends keyof T
+      ? { [_K in Key]: T[_K] extends object ? DeepPick<T[_K], Rest> : T[_K] }
+      : never
+    : never
+
+type UnionToIntersection<U> =
+  (U extends unknown ? (x: U) => 0 : never) extends
+  ((x: infer T) => 0) ? T : never;
+
+type DeepPick<T, K extends string> = UnionToIntersection<
+  K extends infer Keys extends string ? Aux<T, Keys> : never
+>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
