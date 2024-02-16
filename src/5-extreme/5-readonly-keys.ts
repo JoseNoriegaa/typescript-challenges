@@ -18,8 +18,15 @@
  */
 
 /* _____________ Your Code Here _____________ */
+type MyEqual<A, B> =
+  (<T>() => T extends A ? 0 : 1) extends
+  (<T>() => T extends B ? 0 : 1) ? true : false;
 
-type GetReadonlyKeys<T> = any
+type GetReadonlyKeys<T, ROT extends Readonly<T> = Readonly<T>> = keyof {
+  [
+    K in keyof T as MyEqual<Pick<T, K>, Pick<ROT, K>> extends true ? K : never
+  ]: never
+}
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

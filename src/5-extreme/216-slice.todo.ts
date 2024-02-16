@@ -1,7 +1,10 @@
 /*
  * 216 - Slice
  *
- * Implement the JavaScript `Array.slice` function in the type system. `Slice<Arr, Start, End>` takes the three argument. The output should be a subarray of `Arr` from index `Start` to `End`. Indexes with negative numbers should be counted from reversely.
+ * Implement the JavaScript `Array.slice` function in the type system.
+ *  `Slice<Arr, Start, End>` takes the three argument.
+ *  The output should be a subarray of `Arr` from index `Start` to `End`.
+ * Indexes with negative numbers should be counted from reversely.
  *
  * For example
  *
@@ -14,7 +17,55 @@
 
 /* _____________ Your Code Here _____________ */
 
-type Slice<Arr, Start, End> = any
+type Range<N, O extends unknown[] = []> = N extends O['length']
+  ? O
+  : Range<N, [...O, O['length']]>
+
+type IsNegative<N extends number> = `${N}` extends `-${number}` ? true : false;
+
+type Abs<N extends number> = `${N}` extends `-${infer _N extends number}` ? _N : N;
+
+type ConvertToPositivePosition<
+  N,
+  Len,
+  P extends number[] = Range<Len>,
+  C extends unknown[] = []
+> = N extends [...C, 0]['length']
+  ? P extends [...unknown[], infer L extends number]
+    ? L
+    : never
+  : P extends [...infer R extends number[], unknown]
+    ? ConvertToPositivePosition<N, Len, R, [...C, 0]>
+    : never;
+
+type Aux<
+  Arr extends unknown[],
+  Start,
+  End,
+  Append extends boolean = false,
+  C extends unknown[] = [],
+  O extends unknown[] = []
+> = C['length'] extends End
+? O
+: [Append, Start] extends [false, C['length']]
+  ? Aux<Arr, Start, End, true, C, O>
+  : Arr extends [infer A, ...infer Rest]
+    ? Append extends true
+      ? Aux<Rest, Start, End, Append, [...C, 0], [...O, A]>
+      : Aux<Rest, Start, End, Append, [...C, 0], O>
+    : [];
+
+type Slice<
+  Arr extends unknown[],
+  Start extends number = 0,
+  End extends number = Arr['length'],
+> = IsNegative<Start> extends true
+  ? Slice<Arr, ConvertToPositivePosition<Abs<Start>, Arr['length']>, End>
+  : IsNegative<End> extends true
+    ? Slice<Arr, Start, ConvertToPositivePosition<Abs<End>, Arr['length']>>
+    : Aux<Arr, Start, End>;
+
+type R = Slice<Arr, 2, 4>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
