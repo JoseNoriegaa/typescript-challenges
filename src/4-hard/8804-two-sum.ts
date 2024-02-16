@@ -14,7 +14,26 @@
 
 /* _____________ Your Code Here _____________ */
 
-type TwoSum<T extends number[], U extends number> = any
+type Range<N, O extends unknown[] = []> = N extends O['length']
+  ? O
+  : Range<N, [...O, 0]>
+
+type Sum<A, B> = [...Range<A>, ...Range<B>]['length'];
+
+type TwoSum<
+  T extends number[],
+  U extends number,
+  P1 extends unknown[] = [],
+  P2 extends unknown[] = [0],
+> = T['length'] extends P2['length']
+  ? false
+  : Sum<T[P1['length']], T[P2['length']]> extends U
+    ? true
+    : TwoSum<T, U, P1, [...P2, 0]> extends true
+      ? true
+      : TwoSum<T, U, [...P1, 0], [...P1, 0, 0]>
+
+type R = TwoSum<[3, 0, 3], 6>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

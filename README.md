@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (157/173)
+## Problems (160/173)
 
 ### Warm (1/1) ✅
 
@@ -127,7 +127,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Pascals triangle](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30958-pascals-triangle.ts)
 - [Shitariteraru](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/3-medium/30970-shitariteraru.ts)
 
-### Hard (44/47)
+### Hard (47/47) ✅
 
 - [Simple vue](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/6-simple-vue.ts)
 - [Currying 1](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/17-currying-1.ts)
@@ -135,6 +135,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Get required](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/57-get-required.ts)
 - [Get optional](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/59-get-optional.ts)
 - [Required keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/89-required-keys.ts)
+- [Optional keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/90-optional-keys.ts)
 - [Capitalizewords](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/112-capitalizewords.ts)
 - [Camelcase](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/114-camelcase.ts)
 - [C printf parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/147-c-printf-parser.ts)
@@ -162,6 +163,8 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Intersection](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/5423-intersection.ts)
 - [Binary to decimal](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/6141-binary-to-decimal.ts)
 - [Object key paths](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/7258-object-key-paths.ts)
+- [Two sum](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/8804-two-sum.ts)
+- [Validdate](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9155-validdate.ts)
 - [Assign](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9160-assign.ts)
 - [Maximum](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9384-maximum.ts)
 - [Capitalize nest object keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9775-capitalize-nest-object-keys.ts)
@@ -183,9 +186,7 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 
 
 
-- [HARD - Optional keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/90-optional-keys.todo.ts)
-- [HARD - Two sum](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/8804-two-sum.todo.ts)
-- [HARD - Validdate](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/9155-validdate.todo.ts)
+
 - [EXTREME - Readonly keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/5-readonly-keys.todo.ts)
 - [EXTREME - Slice](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/216-slice.todo.ts)
 - [EXTREME - Currying 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/462-currying-2.todo.ts)
