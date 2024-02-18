@@ -36,7 +36,62 @@
 
 /* _____________ Your Code Here _____________ */
 
-declare function DynamicParamsCurrying(fn: any): any
+type Currying<
+  // Arguments of the function to split into multiple functions
+  Args extends unknown[],
+  // Return type of the final function
+  Return extends unknown,
+  // Flag to keep track of the arguments in order to make the function overloads
+  ArgsAcc extends unknown[] = []
+> =
+  // Get the first argument
+  Args extends [infer Arg, ...infer Rest]
+  ?
+    /**
+     * Check if we don't have any other arguments to process
+     * so we don't create an extra overload for the last curried
+     * function.
+     *
+     * Considering we have 2 arguments [bool, str] and we are in the last
+     * recursive call.
+     *
+     * Without this checking we will be creating the following type:
+     *
+     * (arg: str) => str & () => str
+     */
+    Rest extends []
+      ?
+        (...args: [...ArgsAcc, Arg]) => Return
+      :
+      /**
+       * Create the base function with arguments.
+       *
+       * Considering we have 3 arguments [bool, str, num]
+       *
+       * The first iteration is going to generate:
+       * (arg: bool) => ...
+       *
+       * Then we use intersection to create the rest of overloads.
+       *
+       * so we get:
+       * (arg: bool) => ... & (a: bool, b: str) => ... & (a: bool, b: str, c: num) => ...
+       *
+       * That will be it for the first function, then we need to take care of the "return" step
+       * to get the rest of curried functions. And for that we repeat the same process as above
+       * by returning a recursive call excluding the current argument we added in our function.
+       */
+      ((...args: [...ArgsAcc, Arg]) => Currying<Rest, Return>)
+      & Currying<Rest, Return, [...ArgsAcc, Arg]>
+  :
+  /**
+   * Base case, used when we don't have any arguments to process.
+   */
+  () => Return;
+
+declare function DynamicParamsCurrying<
+  Args extends unknown[],
+  Return
+>(fn: (...args: Args) => Return): Currying<Args, Return>
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'

@@ -5,7 +5,7 @@ Each solution is stored in its own file, named after the challenge it solves, an
 
 Feel free to use these solutions as a reference or inspiration for your own solutions. However, I encourage you to try to solve the challenges on your own before checking the solutions!
 
-## Problems (161/173)
+## Problems (162/173)
 
 ### Warm (1/1) ✅
 
@@ -177,11 +177,12 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 - [Optionalundefined](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/28143-optionalundefined.ts)
 - [Bitwisexor](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/4-hard/30575-bitwisexor.ts)
 
-### Extreme (3/15)
+### Extreme (4/15)
 
 - [Readonly keys](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/5-readonly-keys.ts)
 - [Query string parser](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/151-query-string-parser.ts)
 - [Integers comparator](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/274-integers-comparator.ts)
+- [Currying 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/462-currying-2.ts)
 
  ## Unsolved Problems
 
@@ -189,7 +190,6 @@ Feel free to use these solutions as a reference or inspiration for your own solu
 
 
 - [EXTREME - Slice](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/216-slice.todo.ts)
-- [EXTREME - Currying 2](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/462-currying-2.todo.ts)
 - [EXTREME - Sum](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/476-sum.todo.ts)
 - [EXTREME - Multiply](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/517-multiply.todo.ts)
 - [EXTREME - Tag](https://github.com/JoseNoriegaa/typescript-challenges/blob/main/src/5-extreme/697-tag.todo.ts)
