@@ -1,7 +1,10 @@
 /**
  * 925 - Assert Array Index
  *
- * Sometimes we want to use the good old `for`-loop with an index to traverse the array, but in this case TypeScript does not check in any way that we are accessing the elements of the array at its real index (not exceeding the length of the array), and that we are not using an arbitrary number as an index, or index from another array (for nested loops, for traversing matrices or graphs):
+ * Sometimes we want to use the good old `for`-loop with an index to traverse the array,
+ * but in this case TypeScript does not check in any way that we are accessing the elements
+ * of the array at its real index (not exceeding the length of the array), and that we are
+ * not using an arbitrary number as an index, or index from another array (for nested loops, for traversing matrices or graphs):
  * ```ts
  * const matrix = [
  *     [3, 4],

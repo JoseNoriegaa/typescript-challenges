@@ -15,19 +15,31 @@
  */
 
 /* _____________ Your Code Here _____________ */
+type AddPrefix<P extends string, Key extends (string | number)>
+  =
+  [P] extends [never]
+    ? `${Key}`
+    : Key extends string
+      ? `${P}.${Key}`
+      :
+        | `${P}[${Key}]`
+        | `${P}.[${Key}]`
+        | `${P}.${Key}`;
 
-type ObjectKeyPaths<T extends object, Prefix extends string = ''> = keyof T extends infer Key extends string
-  ? Key extends keyof T
-    ? T[Key] extends Record<string, unknown>
-      ? `${Prefix}${Key}` | ObjectKeyPaths<T[Key], `${Prefix}${Key}.`>
-      : `${Prefix}${Key}`
-    : never
-  : never;
-
-type S = ObjectKeyPaths<typeof ref>
+type ObjectKeyPaths<
+  T extends object,
+  Acc extends string = never,
+  Keys extends keyof T = T extends unknown[] ? keyof T & number : keyof T & string,
+> =
+  | Acc
+  | {
+    [K in Keys]: T[K] extends object
+      ? ObjectKeyPaths<T[K], AddPrefix<Acc, K & (string | number)>>
+      : AddPrefix<Acc, K & (string | number)>
+  }[Keys]
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect, ExpectExtends } from '@type-challenges/utils'
+import type { Debug, Equal, Expect, ExpectExtends } from '@type-challenges/utils'
 
 const ref = {
   count: 1,
@@ -70,4 +82,8 @@ type cases = [
   Expect<Equal<ExpectExtends<ObjectKeyPaths<typeof ref>, 'person.name.'>, false>>,
   Expect<Equal<ExpectExtends<ObjectKeyPaths<typeof ref>, '.person.name'>, false>>,
   Expect<Equal<ExpectExtends<ObjectKeyPaths<typeof ref>, 'person.pets.[0]type'>, false>>,
+
+  // Custom
+  Expect<Equal<ExpectExtends<ObjectKeyPaths<typeof ref>, 'person.pets.map'>, false>>,
+  Expect<Equal<ExpectExtends<ObjectKeyPaths<typeof ref>, 'person.pets.length'>, false>>,
 ]
